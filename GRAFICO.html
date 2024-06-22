@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COAST - Senderos Costeros Sustentables</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="contenedor-landing">
+    <img src="imgs\COAST_bg.jpg" alt="COAST-tool" class="dinamica">
+  </div>
+
+<div class="header-tabla">
+
+  <div class="contenedor-header">
+    <div class="vinculo" id="acerca"><a href="ACERCA.html" id="textoAcerca">Instrucciones</a></div>
+    <div class="vinculo" id="centro"><img id="logo" src="imgs\COAST_LOGO.png" alt="COAST-logo"></div>
+    <div class="vinculo" id="fuente"><a href="FUENTE.html" id="textoFuente">Fuente</a></div>
+  </div>
+
+  <div class="contenedor-tabla" id="tabla">
+
+    <div class="COL_1">
+      
+      <div class="caja-variable" id="Variable1">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\1.png" alt="Decagono-v1">
+          <p class="titulo-var">COBERTURA VEGETAL</p>
+        </div>
+        <div class="caja-variable-bottom">
+          <p class="etiqueta">Índice vegetación de<br>diferencia normalizada<br>NDVI</p>
+        <input type="number" id="v1" name="v1" size="7" min="-1" max="1" step=".01" placeholder="-1 a 1" required>
+        <div class="icono" id="info1">
+          <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+          <div class="popup" id="popupv1">
+            NDVI Negativo indica ausencia de vegetación<br>
+              NDVI &lt 0.4 señala vegetación escasa<br>
+              0.4 &lt NDVI &lt 0.6 indica vegetación moderada<br>
+              NDVI &gt 0.6 indica alta cobertura vegetal en más del 60% del área<br>
+        </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="caja-variable" id="Variable2">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\2.png" alt="Decagono-v2">
+          <p class="titulo-var">ESTRUCTURA VEGETAL</p>
+        </div>
+        <div class="caja-variable-bottom">
+          <p class="etiqueta">Índice vegetación<br>de suelo modificado<br>MSAVI</p>
+          <input type="number" id="v2" name="v2" placeholder="-1 a 1" min="-1" max="1" step=".01" size="7"><br>
+          <div class="icono" id="info2">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv2">
+            MSAVI Negativo indica ausencia de vegetación<br>
+            0 &lt MSAVI &lt 0.2 señala vegetación herbácea escasa<br>
+            0.2 &lt MSAVI &lt 0.4 es presencia de pastizales y arbustos<br>
+            0.4 &lt MSAVI &lt 1 indica una estructura vegetal leñosa<br>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="caja-variable" id="Variable3">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\3.png" alt="Decagono-v3">
+          <p class="titulo-var">CONECTIVIDAD INTEGRAL</p>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v3.1" class="etiqueta">Conectividad del paisaje</label>
+          <input type="number" id="v3.1" name="v3.1" placeholder = "0 a 1" maxlength="5" min="0" max="1" size="7">
+          <div class="icono" id="info3-1">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv3-1">
+            X &lt 0.25 indica vegetación en parches aislados con menos del 25% de cobertura vegetal leñosa<br>
+            0.25 &lt X &lt 0.5 señala vegetación en "parches" cubriendo el 50% del área<br>
+            0.5 &lt X &lt 0.75 es vegetación arbórea y arbustiva cubriendo hasta el 75% del área<br>
+            0.75 &lt X es un corredor denso en el ecosistema con vegetación en más del 75% del predio<br>
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v3.2" class="etiqueta">Conectividad de los senderos</label>
+          <input type="number" id="v3.2" name="v3.2" placeholder="0 a 10" min="0" max="10" maxlength="3" size="7">
+          <div class="icono" id="info3-2">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv3-2">
+            X &lt 2 refiere a una mala conectividad de espacios entre senderos<br>
+            2 &lt X &lt 4 indica una conectividad poco eficaz<br>
+            4 &lt X &lt 6 es un corredor aclarado con buena conectividad entre áreas<br>
+            6 &lt X indica una excelente conectividad entre áreas<br>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+
+    <div class="COL_2">
+      <div class="caja-variable" id="Variable4">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\4.png" alt="Decagono-v4">
+          <p class="titulo-var">ACCESIBILIDAD EFICIENTE</p>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v4.1" class="etiqueta">Uniformidad</label>
+          <input type="number" id="v4.1" name="v4.1" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+          <div class="icono" id="info4-1">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv4-1">
+            Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+            <br>Refiere a las grietas, huecos y desniveles en la superficie del camino, y el ancho del mismo para sillas de ruedas.
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v4.2" class="etiqueta">Rugosidad</label>
+          <input type="number" id="v4.2" name="v4.2" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+          <div class="icono" id="info4-2">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv4-2">
+              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+              <br>Refiere al nivel de adherencia y control de la superficie del camino.
+
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v4.3" class="etiqueta">Podotáctil</label>
+          <input type="number" id="v4.3" name="v4.3" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+          <div class="icono" id="info4-3">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv4-3">
+              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+              <br>Refiere a la cobertura de barandas podotáctiles en los senderos para la guía accesible de los no videntes.
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v4.4" class="etiqueta">Barandas</label>
+          <input type="number" id="v4.4" name="v4.4" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+          <div class="icono" id="info4-4">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv4-4">
+              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+              <br>Refiere a la cobertura de barandas en rampas, escaleras y zonas de peligro, que brindan un apoyo adicional.
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom2">
+          <label for="v4.5" class="etiqueta">Rampas</label>
+          <input type="number" id="v4.5" name="v4.5" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+          <div class="icono" id="info4-5">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv4-5">
+              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+              <br>Refiere a la cobertura de rampas de acceso para el tránsito de sillas de ruedas y otros dispositivos de asistencia.
+            </div>
+          </div>
+        </div>
+  </div>
+
+<div class="caja-variable" id="Variable5">
+  <div class="caja-variable-top">
+    <img class="decagono" src="imgs\Decagonos\5.png" alt="Decagono-v5">
+    <p class="titulo-var">ADECUACIÓN DE SERVICIOS</p>
+  </div>
+  <div class="caja-variable-bottom2">
+    <label for="v5.1" class="etiqueta">Iluminación</label>
+    <input type="number" id="v5.1" name="v5.1" placeholder="0 a 100" min="0" max="100" maxlength="3" size="9">
+    <div class="icono" id="info5-1">
+      <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+      <div class="popup" id="popupv5-1">
+        Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+        <br>Mide el nivel de uniformidad, contraste y distribución de luz según la norma IRAM 11607:2011
+      </div>
+
+    </div>
+  </div>
+  <div class="caja-variable-bottom2">
+    <label for="v5.2" class="etiqueta">Bebederos</label>
+    <input type="number" id="v5.2" name="v5.2" placeholder="0 a 100" min="0" max="100" maxlength="3" size="9">
+    <div class="icono" id="info5-2">
+      <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+      <div class="popup" id="popupv5-2">
+        Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+        <br>Mide la cobertura de bebederos en el predio.
+      
+      </div>
+    </div>
+  </div>
+  <div class="caja-variable-bottom2">
+    <label for="v5.3" class="etiqueta">Mobilidad</label>
+    <input type="number" id="v5.3" name="v5.3" placeholder="0 a 100" min="0" max="100" maxlength="3" size="9"><br>
+    <div class="icono" id="info5-3">
+      <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+      <div class="popup" id="popupv5-3">
+        Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+        <br>Mide la cobertura de asientos con respaldo, sectores de ejercitación y recreación adaptado a personas con movilidad reducida según la norma IRAM 3600:2019
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="caja-variable" id="Variable6">
+    <div class="caja-variable-top">
+      <img class="decagono" src="imgs\Decagonos\6.png" alt="Decagono-v6">
+      <p class="titulo-var">SEÑALIZACIÓN INCLUSIVA</p>
+    </div>
+    <div class="caja-variable-bottom2">
+      <label for="v6.1" class="etiqueta">Efectividad</label>
+      <input type="number" id="v6.1" name="v6.1" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+      <div class="icono" id="info6-1">
+        <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+        <div class="popup" id="popupv6-1">
+          Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+        <br>Mide la provisión, orientación y ubicación de la cartelería según la norma IRAM 10005.  
+        </div>
+      </div>
+    </div>
+    <div class="caja-variable-bottom2">
+      <label for="v6.2" class="etiqueta">Asistencia</label>
+      <input type="number" id="v6.2" name="v6.2" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+      <div class="icono" id="info6-2">
+        <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+        <div class="popup" id="popupv6-2">
+          Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
+        <br>Mide la cobertura de "tecnología asistencial" (Braille, QR, Mapas con relieve) según la norma IRAM 10005
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="COL_3">
+      <div class="caja-variable" id="Variable7">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\7.png" alt="Decagono-v7">
+          <p class="titulo-var">CONFORT EN ESPACIOS</p>
+        </div>
+        <div class="caja-variable-bottom" id="box-7">
+          <p class="etiqueta">Áreas asignadas<br>al bienestar</p>
+          <input type="number" id="v7" name="v7" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7">
+          <div class="icono" id="info7">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv7">
+            Medido en llaves de 0-3 / 3-5 / 5-7 / +7<br>
+            Áreas de bienestar son zonas de descanso, libre de humo y ruido, áreas de picnic, espacios para actividades sociales, deportes, recreación, entre otros.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="caja-variable" id="Variable8">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\8.png" alt="Decagono-v8">
+          <p class="titulo-var">INFRAESTRUCTURA EFECTIVA</p>
+        </div>
+        <div class="caja-variable-bottom3">
+          <label for="v8.1" class="etiqueta">Entre bancos</label>
+          <input type="number" id="v8.1" name="v8.1" placeholder="en m2" min="0" maxlength="5" size="7">
+          <div class="icono" id="info8-1">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv8-1">
+              Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
+              Mide la distancia, en metros cuadrados, entre los bancos de descanso.
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom3">
+          <label for="v8.2" class="etiqueta">Entre cestos</label>
+          <input type="number" id="v8.2" name="v8.2" placeholder="en m2" min="0" maxlength="5" size="7">
+          <div class="icono" id="info8-2">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv8-2">
+              Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
+              Mide la distancia, en metros cuadrados, entre los cestos de basura.
+            </div>
+          </div>
+        </div>
+        <div class="caja-variable-bottom3">
+          <label for="v8.3" class="etiqueta">Bebederos</label>
+          <input type="number" id="v8.3" name="v8.3" placeholder="en m2" min="0" maxlength="5" size="7">
+          <div class="icono" id="info8-3">
+            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+            <div class="popup" id="popupv8-3">
+              Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
+              Mide la distancia, en metros cuadrados, entre los bebederos.
+            </div>
+          </div>
+        </div>
+      <div class="caja-variable-bottom3">
+        <label for="v8.4" class="etiqueta">Luminarias</label>
+        <input type="number" id="v8.4" name="v8.4" placeholder="en m2" min="0" maxlength="5" size="7">
+        <div class="icono" id="info8-4">
+          <img class="info" src="imgs\icono-info.png" alt="icono-preg">
+          <div class="popup" id="popupv8-4">
+            Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
+            Mide la distancia, en metros cuadrados, entre equipamiento de luminaria.
+          </div>
+          
+        </div>
+      </div>
+      </div>
+        <button id="generar">GENERAR</button>    
+      </div>
+
+
+    <div class="COL_4">
+      <div class="caja-variable" id="Variable9">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\9.png" alt="Decagono-v2">
+          <p class="titulo-var">MANTENIMIENTO EFICIENTE</p>
+          <div class="popup" id="popupv1">Información</div>
+        </div>
+          <div class="caja-variable-bottom2">
+            <form action="#">
+            <label for="v9.1">Servicios</label>
+            <select name="Servicios" id="v9.1">
+            <option value="0">MALO</option>
+            <option value="1">REGULAR</option>
+            <option value="2">BUENO</option>
+            <option value="3">MUY BUENO</option>
+            </select>
+            </form>
+          </div>
+          <div class="caja-variable-bottom2">
+            <form action="#">
+              <label for="v9.2">Senderos</label>
+              <select name="Senderos" id="v9.2">
+              <option value="0">MALO</option>
+              <option value="1">REGULAR</option>
+              <option value="2">BUENO</option>
+              <option value="3">MUY BUENO</option>
+              </select>
+            </form>
+          </div>
+          <div class="caja-variable-bottom2">
+            <form action="#">
+              <label for="v9.3">Mobiliario</label>
+              <select name="Mobiliario" id="v9.3">
+              <option value="0">MALO</option>
+              <option value="1">REGULAR</option>
+              <option value="2">BUENO</option>
+              <option value="3">MUY BUENO</option>
+              </select>
+            </form>
+          </div>
+          <div class="caja-variable-bottom2">
+            <form action="#">
+              <label for="v9.4">Vegetación</label>
+              <select name="Vegetación" id="v9.4">
+              <option value="0">MALO</option>
+              <option value="1">REGULAR</option>
+              <option value="2">BUENO</option>
+              <option value="3">MUY BUENO</option>
+              </select>
+            </form>
+          </div>
+          <div class="caja-variable-bottom2">
+            <form action="#">
+              <label for="v9.5">Costa del río</label>
+              <select name="Costa del río" id="v9.5">
+              <option value="0">MALO</option>
+              <option value="1">REGULAR</option>
+              <option value="2">BUENO</option>
+              <option value="3">MUY BUENO</option>
+              </select>
+            </form>
+          </div>
+      </div>
+      
+
+      <div class="caja-variable" id="Variable10">
+        <div class="caja-variable-top">
+          <img class="decagono" src="imgs\Decagonos\10.png" alt="Decagono-v10">
+          <p class="titulo-var">PATRIMONIO E IDENTIDAD</p>
+        </div>
+        <div class="caja-variable-bottom2">
+          <form action="#">
+            <label for="v10-1">Arte urbano</label>
+            <select name="Arte urbano" id="v10.1">
+                <option value="0">MALO</option>
+                <option value="1">REGULAR</option>
+                <option value="2">BUENO</option>
+                <option value="3">MUY BUENO</option>
+            </select>
+          </form>
+        </div>
+        <div class="caja-variable-bottom2">
+          <form action="#">
+            <label for="v10-2">S. interpretativos</label>
+            <select name="Senderos interpretativos" id="v10.2">
+                <option value="0">MALO</option>
+                <option value="1">REGULAR</option>
+                <option value="2">BUENO</option>
+                <option value="3">MUY BUENO</option>
+            </select>
+          </form>
+        </div>
+        <div class="caja-variable-bottom2">
+          <form action="#">
+            <label for="v10.3">Participación social</label>
+            <select name="Participación social" id="v10.3">
+            <option value="0">MALO</option>
+            <option value="1">REGULAR</option>
+            <option value="2">BUENO</option>
+            <option value="3">MUY BUENO</option>
+            </select>
+          </form>
+        </div>
+        <div class="caja-variable-bottom2">
+          <form action="#">
+            <label for="v10.4">Bienes culturales</label>
+            <select name="Bienes culturales" id="v10.4">
+            <option value="0">MALO</option>
+            <option value="1">REGULAR</option>
+            <option value="2">BUENO</option>
+            <option value="3">MUY BUENO</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="foot">
+  <img class="abajo" src="imgs\COAST_LOGO.png" alt="">
+</div>
+      <script>
+
+
+document.getElementById("generar").addEventListener("click",() => GENERAR());
+
+function GENERAR() {
+
+
+          const ValorV1 = document.getElementById('v1')
+          var FinalV1 =  Number
+        if (ValorV1.value < 0) {
+          FinalV1 = 0
+        } else if (ValorV1.value < 0.4) {
+          FinalV1 = 1
+        } else if (ValorV1.value < 0.6) {
+          FinalV1 = 2
+        } else {
+          FinalV1 = 3
+        }
+
+        const ValorV2 = document.getElementById('v2')
+        var FinalV2 =  Number
+        if (ValorV2.value < 0) {
+          FinalV2 = 0
+        } else if (ValorV2.value < 0.2) {
+          FinalV2 = 1
+        } else if (ValorV2.value < 0.4) {
+          FinalV2 = 2
+        } else {
+          FinalV2 = 3
+        }
+
+        const ValorV3a = document.getElementById('v3.1')
+        const ValorV3b = document.getElementById('v3.2')
+        var FinalV3 =  Number
+        var categoriaV3a = Number
+        var categoriaV3b = Number
+        if (ValorV3a.value < 0.25) {
+          categoriaV3a = 0
+        } else if (ValorV3a.value < 0.50) {
+          categoriaV3a = 1
+        } else if (ValorV3a.value < 0.75) {
+          categoriaV3a = 2
+        } else {
+          categoriaV3a = 3
+        }
+
+        if (ValorV3b.value < 2.1) {
+          categoriaV3b = 0
+        } else if (ValorV3a.value < 4.1) {
+          categoriaV3b = 1
+        } else if (ValorV3a.value < 6.1) {
+          categoriaV3b = 2
+        } else {
+          categoriaV3b = 3
+        }
+
+        if (((categoriaV3a == 0) && (categoriaV3b == 0 || categoriaV3b == 1)) || (categoriaV3a == 1 && categoriaV3b == 0)) {
+          FinalV3 = 0
+        } else if ((categoriaV3a == 2 && categoriaV3b == 0) || ((categoriaV3a == 1) && (categoriaV3b == 1 || categoriaV3b == 2)) || (categoriaV3a == 0 && (categoriaV3b == 3 || categoriaV3b == 2))) {
+          FinalV3 = 1
+        } else if ((categoriaV3a == 3) && (categoriaV3b == 2 || categoriaV3b == 3) || (categoriaV3a == 2 && categoriaV3b == 3)) {
+          FinalV3 = 3
+        } else {
+          FinalV3 = 2
+        }
+
+
+        const ValorV4a = document.getElementById('v4.1')
+        const ValorV4b = document.getElementById('v4.2')
+        const ValorV4c = document.getElementById('v4.3')
+        const ValorV4d = document.getElementById('v4.4')
+        const ValorV4e = document.getElementById('v4.5')
+
+        var FinalV4a =  Number
+        var FinalV4b =  Number
+        var FinalV4c =  Number
+        var FinalV4d =  Number
+        var FinalV4e =  Number
+        var FinalV4 =  Number
+
+        if (ValorV4a.value < 50) {
+          FinalV4a = 0
+        } else if (ValorV4a.value < 70) {
+          FinalV4a = 1
+        } else if (ValorV4a.value < 90) {
+          FinalV4a = 2
+        } else {
+          FinalV4a = 3
+        }
+
+        if (ValorV4b.value < 50) {
+          FinalV4b = 0
+        } else if (ValorV4b.value < 70) {
+          FinalV4b = 1
+        } else if (ValorV4b.value < 90) {
+          FinalV4b = 2
+        } else {
+          FinalV4b = 3
+        }
+
+        if (ValorV4c.value < 50) {
+          FinalV4c = 0
+        } else if (ValorV4c.value < 70) {
+          FinalV4c = 1
+        } else if (ValorV4c.value < 90) {
+          FinalV4c = 2
+        } else {
+          FinalV4c = 3
+        }
+
+        if (ValorV4d.value < 50) {
+          FinalV4d = 0
+        } else if (ValorV4d.value < 70) {
+          FinalV4d = 1
+        } else if (ValorV4d.value < 90) {
+          FinalV4d = 2
+        } else {
+          FinalV4d = 3
+        }
+
+        if (ValorV4e.value < 50) {
+          FinalV4e = 0
+        } else if (ValorV4e.value < 70) {
+          FinalV4e = 1
+        } else if (ValorV4e.value < 90) {
+          FinalV4e = 2
+        } else {
+          FinalV4e = 3
+        }
+
+        FinalV4 = ((FinalV4a*0.8)+(FinalV4b*1)+(FinalV4c*1.2)+(FinalV4d*0.6)+(FinalV4e*1.3))/5
+
+        const ValorV5a = document.getElementById('v5.1')
+        const ValorV5b = document.getElementById('v5.2')
+        const ValorV5c = document.getElementById('v5.3')
+        var FinalV5a =  Number
+        var FinalV5b =  Number
+        var FinalV5c =  Number
+        var FinalV5 =  Number
+
+        if (ValorV5a.value < 50) {
+          FinalV5a = 0
+        } else if (ValorV5a.value < 70) {
+          FinalV5a = 1
+        } else if (ValorV5a.value < 90) {
+          FinalV5a = 2
+        } else {
+          FinalV5a = 3
+        }
+
+        if (ValorV5b.value < 50) {
+          FinalV5b = 0
+        } else if (ValorV5b.value < 70) {
+          FinalV5b = 1
+        } else if (ValorV5b.value < 90) {
+          FinalV5b = 2
+        } else {
+          FinalV5b = 3
+        }
+
+        if (ValorV5c.value < 50) {
+          FinalV5c = 0
+        } else if (ValorV5c.value < 70) {
+          FinalV5c = 1
+        } else if (ValorV5c.value < 90) {
+          FinalV5c = 2
+        } else {
+          FinalV5c = 3
+        }
+
+        FinalV5 = ((FinalV5a*1.1)+(FinalV5b*0.6)+(FinalV5c*1.3))/3
+
+        const ValorV6a = document.getElementById('v6.1')
+        const ValorV6b = document.getElementById('v6.2')
+        var FinalV6a =  Number
+        var FinalV6b =  Number
+        var FinalV6 =  Number
+
+        if (ValorV6a.value < 50) {
+          FinalV6a = 0
+        } else if (ValorV6a.value < 70) {
+          FinalV6a = 1
+        } else if (ValorV6a.value < 90) {
+          FinalV6a = 2
+        } else {
+          FinalV6a = 3
+        }
+
+        if (ValorV6b.value < 50) {
+          FinalV6b = 0
+        } else if (ValorV6b.value < 70) {
+          FinalV6b = 1
+        } else if (ValorV6b.value < 90) {
+          FinalV6b = 2
+        } else {
+          FinalV6b = 3
+        }
+
+        FinalV6 = (FinalV6a + FinalV6b)/2
+
+        var ValorV7 = document.getElementById('v7')
+        var FinalV7 =  Number
+
+        if (ValorV7.value < 3) {
+          FinalV7 = 0
+        } else if (ValorV7.value < 5) {
+          FinalV7 = 1
+        } else if (ValorV7.value < 7) {
+          FinalV7 = 2
+        } else {
+          FinalV7 = 3
+        }
+
+        const ValorV8a = document.getElementById('v8.1')
+        const ValorV8b = document.getElementById('v8.2')
+        const ValorV8c = document.getElementById('v8.3')
+        const ValorV8d = document.getElementById('v8.4')
+
+        var FinalV8a =  Number
+        var FinalV8b =  Number
+        var FinalV8c =  Number
+        var FinalV8d =  Number
+        var FinalV8 =  Number
+
+        if (ValorV8a.value > 200) {
+          FinalV8a = 0
+        } else if (ValorV8a.value < 100) {
+          FinalV8a = 1
+        } else if (ValorV8a.value < 50) {
+          FinalV8a = 2
+        } else {
+          FinalV8a = 3
+        }
+
+        if (ValorV8b.value > 200) {
+          FinalV8b = 0
+        } else if (ValorV8b.value < 100) {
+          FinalV8b = 1
+        } else if (ValorV8b.value < 50) {
+          FinalV8b = 2
+        } else {
+          FinalV8b = 3
+        }
+
+        if (ValorV8c.value > 200) {
+          FinalV8c = 0
+        } else if (ValorV8c.value < 100) {
+          FinalV8c = 1
+        } else if (ValorV8c.value < 50) {
+          FinalV8c = 2
+        } else {
+          FinalV8c = 3
+        }
+
+        if (ValorV8d.value > 200) {
+          FinalV8d = 0
+        } else if (ValorV8d.value < 100) {
+          FinalV8d = 1
+        } else if (ValorV8d.value < 50) {
+          FinalV8d = 2
+        } else {
+          FinalV8d = 3
+        }
+
+        FinalV8 = ((FinalV8a*1.3)+(FinalV8b*1.1)+(FinalV8c*0.6)+(FinalV8d))/4
+
+      
+        var ValorV9a = document.getElementById('v9.1')
+        const ValorV9b = document.getElementById('v9.2')
+        const ValorV9c = document.getElementById('v9.3')
+        const ValorV9d = document.getElementById('v9.4')
+        const ValorV9e = document.getElementById('v9.5')
+
+        var FinalV9a =  Number
+        var FinalV9b =  Number
+        var FinalV9c =  Number
+        var FinalV9d =  Number
+        var FinalV9e =  Number
+        var FinalV9 =  Number
+
+        if (ValorV9a.value == "0") {
+          FinalV9a = 0
+        } else if (ValorV9a.value == "1") {
+          FinalV9a = 1
+        } else if (ValorV9a.value == "2") {
+          FinalV9a = 2
+        } else {
+          FinalV9a = 3
+        }
+
+        if (ValorV9b.value == "0") {
+          FinalV9b = 0
+        } else if (ValorV9b.value == "1") {
+          FinalV9b = 1
+        } else if (ValorV9b.value == "2") {
+          FinalV9b = 2
+        } else {
+          FinalV9b = 3
+        }
+
+        if (ValorV9c.value == "0") {
+          FinalV9c = 0
+        } else if (ValorV9c.value == "1") {
+          FinalV9c = 1
+        } else if (ValorV9c.value == "2") {
+          FinalV9c = 2
+        } else {
+          FinalV9c = 3
+        }
+
+        if (ValorV9d.value == "0") {
+          FinalV9d = 0
+        } else if (ValorV9d.value == "1") {
+          FinalV9d = 1
+        } else if (ValorV9d.value == "2") {
+          FinalV9d = 2
+        } else {
+          FinalV9d = 3
+        }
+
+        if (ValorV9e.value == "0") {
+          FinalV9e = 0
+        } else if (ValorV9e.value == "1") {
+          FinalV9e = 1
+        } else if (ValorV9e.value == "2") {
+          FinalV9e = 2
+        } else {
+          FinalV9e = 3
+        }
+
+        FinalV9 = ((FinalV9a*0.7)+(FinalV9b)+(FinalV9c*1.2)+(FinalV9d*1.3)+(FinalV9e*0.8))/5
+
+        var ValorV10a = document.getElementById('v10.1')
+        var ValorV10b = document.getElementById('v10.2')
+        var ValorV10c = document.getElementById('v10.3')
+        var ValorV10d = document.getElementById('v10.4')
+
+        var FinalV10a =  Number
+        var FinalV10b =  Number
+        var FinalV10c =  Number
+        var FinalV10d =  Number
+        var FinalV10e =  Number
+        var FinalV10 =  Number
+
+        if (ValorV10a.value == "0") {
+          FinalV10a = 0
+        } else if (ValorV10a.value == "1") {
+          FinalV10a = 1
+        } else if (ValorV10a.value == "2") {
+          FinalV10a = 2
+        } else {
+          FinalV10a = 3
+        }
+
+        if (ValorV10b.value == "0") {
+          FinalV10b = 0
+        } else if (ValorV10b.value == "1") {
+          FinalV10b = 1
+        } else if (ValorV10b.value == "2") {
+          FinalV10b = 2
+        } else {
+          FinalV10b = 3
+        }
+
+        if (ValorV10c.value == "0") {
+          FinalV10c = 0
+        } else if (ValorV10c.value == "1") {
+          FinalV10c = 1
+        } else if (ValorV10c.value == "2") {
+          FinalV10c = 2
+        } else {
+          FinalV10c = 3
+        }
+
+        if (ValorV10d.value == "0") {
+          FinalV10d = 0
+        } else if (ValorV10d.value == "1") {
+          FinalV10d = 1
+        } else if (ValorV10d.value == "2") {
+          FinalV10d = 2
+        } else {
+          FinalV10d = 3
+        }
+
+        FinalV10 = ((FinalV10a*1.2)+(FinalV10b*0.7)+(FinalV10c*0.9)+(FinalV10d*1.3))/4
+
+
+        localStorage.setItem("Valor1", FinalV1)
+        localStorage.setItem("Valor2", FinalV2)
+        localStorage.setItem("Valor3", FinalV3)
+        localStorage.setItem("Valor4", FinalV4)
+        localStorage.setItem("Valor5", FinalV5)
+        localStorage.setItem("Valor6", FinalV6)
+        localStorage.setItem("Valor7", FinalV7)
+        localStorage.setItem("Valor8", FinalV8)
+        localStorage.setItem("Valor9", FinalV9)
+        localStorage.setItem("Valor10", FinalV10)
+
+
+        window.location.href = "RADAR.html"
+      }
+
+      </script>
+</body>
+</html>

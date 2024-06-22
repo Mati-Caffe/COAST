@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COAST - Gráfico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body id="fondo">
+    <div class="contenedor-header">
+        <div class="vinculo" id="acerca"><a href="ACERCA.html" id="textoAcerca">Instrucciones</a></div>
+        <div class="vinculo" id="centro"><img id="logo" src="imgs\COAST_LOGO.png" alt="COAST-logo"></div>
+        <div class="vinculo" id="fuente"><a href="FUENTE.html" id="textoFuente">Fuente</a></div>
+      </div>
+
+      <div class="grafico" id="radarChart">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <button id="descargar">Descargar gráfico</button>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const FinalV1 = localStorage.getItem("Valor1");
+      const FinalV2 = localStorage.getItem("Valor2");
+      const FinalV3 = localStorage.getItem("Valor3");
+      const FinalV4 = localStorage.getItem("Valor4");
+      const FinalV5 = localStorage.getItem("Valor5");
+      const FinalV6 = localStorage.getItem("Valor6");
+      const FinalV7 = localStorage.getItem("Valor7");
+      const FinalV8 = localStorage.getItem("Valor8");
+      const FinalV9 = localStorage.getItem("Valor9");
+      const FinalV10 = localStorage.getItem("Valor10");
+
+
+      var myChart = document.getElementById('myChart')
+        var ctx = document.getElementById('myChart');
+        const descarga = document.getElementById('descargar')
+
+      myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['V1 - NDVI', 'V2 - MSAVI', 'V3 - CONECTIVIDAD', 'V4 - ACCESIBILIDAD', 'V5 - SERVICIOS', 'V6 - SEÑALIZACIÓN', 'V7 - CONFORT','V8 - INFRAESTRUCTURA','V9 - MANTENIMIENTO','V10 - PATRIMONIO'],
+          datasets: [{
+            label: 'Valorización COAST',
+            data: [FinalV1, FinalV2, FinalV3, FinalV4, FinalV5, FinalV6, FinalV7, FinalV8, FinalV9, FinalV10],
+            borderWidth: 3,
+            fill: false
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              display: false
+            },
+            r: {
+              suggestedMin: -0.5,
+              suggestedMax: 3
+            }
+          },
+        }
+      });
+    
+
+
+  document.getElementById('descargar').addEventListener('click',() => {
+  let canvasUrl = document.getElementById('myChart').toDataURL("image/jpeg", 0.5);
+  console.log(canvasUrl);
+  const createEl = document.createElement('a');
+  createEl.href = canvasUrl;
+  createEl.download = "COAST-Grafico";
+  createEl.click();
+  createEl.remove();
+});
+
+    </script>
+</body>
+</html>
+

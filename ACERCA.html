@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COAST - Instrucciones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="contenedor-header">
+        <div class="vinculo" id="acerca"><a href="ACERCA.html" id="textoAcerca">Instrucciones</a></div>
+        <div class="vinculo" id="centro"><img id="logo" src="imgs\COAST_LOGO.png" alt="COAST-logo"></div>
+        <div class="vinculo" id="fuente"><a href="FUENTE.html" id="textoFuente">Fuente</a></div>
+      </div>
+
+
+      <div class="HEAD">
+        <h1 id="instruc">Instrucciones</h1>
+        <p>Guía para el análisis e implementación de COAST</p>
+      </div>
+    <div class="col_izquierda">
+        <div class="acercaDe" id="acercav1">
+            <h2 class="SECCION">Biodiversidad</h2>
+            <p><span class="subtitulo-instruc">1. NDVI - Cantidad de suelo cubierto por vegetación.</span> <br>
+                Esta estrategia se basa en el procesamiento de imágenes satelitales para medir la 
+                cantidad de vegetación utilizando el Índice de Vegetación de Diferencia Normalizada (NDVI),
+                 que varía de -1.0 a 1.0, utilizado para identificar y cuantificar la cobertura vegetal, 
+                 donde valores negativos indican ausencia de vegetación y valores superiores a 0.6 indican 
+                 una alta cobertura vegetal.<br><br>
+                Proporciona alimento y refugio a la fauna, y controla erosión y regula el ciclo de agua.
+                Su <strong>implementación</strong> es la siguiente: <br><br>
+                Software Recomendado: Software de uso libre, gratuito y de fácil manejo para procesar 
+                las imágenes satelitales o tomadas por el usuario. QGIS (Qgis.org), Land Viewer 
+                (eos.com/landviewer).
+                Alternativa Manual: Es posible realizar una evaluación visual. 
+                Sin embargo, esta carecerá de la precisión tecnológica que ofrece el NDVI.
+                </p>
+            <img class="parametro" src="imgs\parametros\parametros1.png" alt="Parámetros de variable">
+            </div>
+        
+
+            <div class="acercaDe" id="acercav2">
+                <p><span class="subtitulo-instruc">2. MSAVI - Composición y distribución de las plantas en un ecosistema. </span><br>
+                Esta estrategia se centra en el análisis detallado de la estructura vegetal 
+                utilizando el Índice de Vegetación Ajustado al Suelo Modificado (MSAVI). 
+                A diferencia del NDVI, el MSAVI está diseñado específicamente para mejorar 
+                la detección de la estructura y densidad de la vegetación, lo que lo hace 
+                ideal para evaluar la composición de la vegetación y la presencia de diferentes 
+                tipos de cobertura vegetal.<br><br>
+                Regula procesos ecológicos, la fotosíntesis, la respiración y el ciclo de nutrientes.<br><br>
+                Al igual que en la estrategia 1, se recomienda utilizar software gratuito, 
+                de fácil acceso y manejo, como QGIS o Land Viewer. En caso de no contar con 
+                acceso a software, se puede realizar una evaluación visual, aunque esta puede 
+                carecer de la precisión de la tecnología.
+                    </p>
+                <img class="parametro" src="imgs\parametros\parametros2.png" alt="Parámetros de variable">
+            </div>
+        
+            <div class="acercaDe" id="v3">
+                <p class="intro-instruccion">
+                <span class="subtitulo-instruc">3. Conectividad Integral - Interconexión de ecosistemas. Fluidez y diversidad de movimiento.</span><br>
+                La conectividad del paisaje evalúa la capacidad de los elementos naturales y 
+                artificiales para permitir el movimiento de especies y procesos ecológicos, 
+                combinando y ponderando índices de cantidad y estructura de la vegetación y 
+                distancia entre grupos arbustivos y leñosos. La conectividad de senderos se 
+                centra en la accesibilidad de la red de senderos para los usuarios, considerando 
+                número de conexiones y espacios del sector, informando movilidad y acceso a 
+                diferentes puntos de interés.<br><br>
+                La implementación de esta estrategia maximiza la utilidad y valor de los senderos 
+                costeros para la comunidad y los visitantes, promoviendo su conservación y conciencia 
+                ambiental.                    
+                </p>
+                <img class="parametro" src="imgs\parametros\parametros3-1.png" alt="Parámetros de variable">
+                <img class="parametro" src="imgs\parametros\parametros3-2.png" alt="Parámetros de variable">
+
+            </div>
+        
+            <div class="acercaDe" id="v4">
+                <h2 class="SECCION">Accesibilidad e Inclusión</h2>
+                <p class="intro-instruccion">
+                    <span class="subtitulo-instruc">4. Accesibilidad Eficiente - Accesibilidad de senderos para personas con discapacidades físicas y/o sensoriales. </span><br>
+                    Esta estrategia implica una inspección física del área y realización de encuestas a los 
+                    usuarios para recopilar información sobre la percepción de la accesibilidad e inclusión 
+                    en el lugar. Se consideran características como la rugosidad y uniformidad superficial, 
+                    la presencia de bandas podotáctiles, rampas y barandas.<br><br>
+
+                Su anáisis determina cumplimiento de normas de inclusión e identifican las áreas que necesitan mejoras.
+                Al considerar y evaluar estas características en los senderos costeros, promueve la igualdad de 
+                oportunidades y el acceso a la naturaleza para todas las personas.<br><br>
+                El proceso de evaluación implica el uso de un sistema de puntuación ponderada que asigna 
+                pesos específicos a cada variable relevante para la accesibilidad y la inclusión en el sendero. 
+                    </p>
+                <img class="parametro" src="imgs\parametros\parametros4.png" alt="Parámetros de variable">
+            </div>
+
+            <div class="acercaDe" id="v5">
+                <p class="intro-instruccion">
+                <span class="subtitulo-instruc">5. Adecuación de Servicios -  Capacidad de los servicios para satisfacer las necesidades de las personas con discapacidad en igualdad de condiciones con las demás personas.</span><br>
+                Esta estrategia se centra en mejorar los servicios en senderos costeros 
+                para garantizar la accesibilidad universal. Se evalúa considerando normativas 
+                como IRAM 50001:2020 para accesibilidad y la norma IRAM 11607:2011 para iluminación, 
+                asegurando uniformidad, contraste y distribución de luz. La accesibilidad del 
+                mobiliario urbano conforme a IRAM 3600:2019, incorporando elementos como asientos 
+                adaptados, sectores de ejercitación y recreación, y equipamiento específico.<br><br>
+
+                La optimización de servicios en senderos costeros urbanos garantiza una mayor 
+                inclusión y accesibilidad universal, cumpliendo con normativas y proporcionando 
+                un entorno seguro y acogedor para todos los usuarios.<br><br>
+                
+                Se utiliza una matriz de variables ponderadas para evaluar la adecuación de cada 
+                aspecto de los servicios en relación con el total del predio. Se asignan puntajes 
+                según la cumplimentación de requisitos, priorizando la adecuación inclusiva del 
+                mobiliario urbano, seguida de la iluminación y otros elementos. La puntuación 
+                total refleja la adecuación general de los servicios en el sendero costero, 
+                considerando la ponderación de cada aspecto evaluado.<br><br>
+                Fórmula de Valoración: [Σ(Pi * Ci)] / n, donde (P) es el puntaje asignado (0 a 3), (i) son las variables evaluadas, (C) son los coeficientes de peso asignados a cada variable, y (n) es el número total de variables ponderadas.
+                Se asigna una mayor importancia (coeficiente 1,3) a la adecuación inclusiva del mobiliario urbano, seguida por IL (coeficiente 1,1) y bebederos (coeficiente 0,6).).
+
+                </p>
+                <img class="parametro" src="imgs\parametros\parametros5.jpeg" alt="Parámetros de variable">
+            </div>
+        
+    </div>
+    
+
+    <div class="col_derecha">
+        <div class="acercaDe" id="v6">
+            <p class="intro-instruccion">
+                <span class="subtitulo-instruc">6. Señalización Inclusiva - Asistencia de cartelería para ser utilizada y comprendida.</span><br>
+                Esta estrategia se centra en medir la efectividad, eficiencia 
+                y la tecnología asistencial de la señalización en senderos costeros. 
+                Se consideran aspectos como la provisión, orientación y ubicación de 
+                la cartelería, así como la inclusión de tecnologías asistenciales como 
+                Braille, sistema audible, QR y mapa de ubicación en relieve. 
+                La evaluación se basa en los requisitos de la norma IRAM 10005 sobre 
+                accesibilidad al entorno construido y símbolos gráficos para la señalización 
+                de lugares accesibles a personas con discapacidad.<br><br>
+
+                La optimización de la cartelería en senderos costeros garantiza la accesibilidad 
+                y la inclusión, cumpliendo con las normativas y proporcionando un entorno seguro 
+                y accesible para todos los usuarios.<br><br>
+                
+                Se utiliza una matriz de variables ponderadas para evaluar la efectividad, 
+                eficiencia y tecnología asistencial de la señalización respecto del total 
+                de la cartelería necesaria en el espacio público. La puntuación se calcula 
+                con la expresión: [Σ(Pi*Ci)]/n, donde (P) representa el puntaje asignado 
+                (0 para servicios no adecuados y 3 para servicios que cumplen el requisito), 
+                (i) refiere a las variables, (C) representa su coeficiente y (n) es el número 
+                de variables ponderadas.
+            </p>
+            <img class="parametro" src="imgs\parametros\parametros6.jpeg" alt="Parámetros de variable">
+        </div>
+
+        <div class="acercaDe" id="v7">
+            <h2 class="SECCION">Confort y Bienestar</h2>
+            <p class="intro-instruccion">
+            <span class="subtitulo-instruc">7. Confort en Espacios - Relación y adecuación entre el usuario y su entorno.</span> <br>
+                Esta estrategia utiliza encuestas para cuantificar la sensación 
+                de bienestar de los usuarios en los senderos costeros. 
+                Diseñadas para conocer el grado de conformidad de los 
+                usuarios con las prestaciones del predio, el estado y 
+                el mantenimiento del mismo. Se consideran variables 
+                cualitativas como el estado de los senderos, la calidad 
+                del entorno, el cuidado de la costa, el mantenimiento del predio, 
+                el estado de los servicios y la infraestructura, el medio ambiente 
+                y la percepción general del predio.<br><br>
+
+                La evaluación de la sensación de bienestar a través de encuestas 
+                proporciona información esencial para la mejora de los senderos costeros, 
+                asegurando que se ajusten a las necesidades y preferencias de los usuarios, 
+                promoviendo así un entorno más confortable y satisfactorio.<br><br>
+
+                Las encuestas se realizan a los usuarios después de su experiencia en el sendero. 
+                Se utilizan estadísticas descriptivas para analizar los datos recogidos y evaluar 
+                la transitabilidad y habitabilidad de los senderos y su entorno. 
+                La unidad de análisis es el usuario, considerando una muestra representativa de 
+                diferentes franjas etarias. Los resultados de las encuestas permiten identificar 
+                las áreas que requieren mejoras y diseñar estrategias para aumentar el bienestar de los usuarios.
+                </p>
+            <img class="parametro" src="imgs\parametros\parametros7.jpeg" alt="Parámetros de variable">
+        </div>
+    
+        <div class="acercaDe" id="v8">
+            <h2 class="SECCION">Mantenimiento y Gestión</h2>
+            <p class="intro-instruccion">
+            <span class="subtitulo-instruc">8. Infraestructura Efectiva - Diseño, cantidad y ubicación adecuada del mobiliario urbano.</span><br>
+                Esta estrategia también se basa en las encuestas realizadas a los 
+                visitantes del predio, que revelan la importancia de contar con 
+                una infraestructura adecuada en los senderos costeros, como bancos, 
+                sillas, bebederos, cestos de residuos y luminarias. Su eficiencia 
+                dependerá tanto de la cantidad como de la ubicación adecuada del 
+                mobiliario urbano. Se realiza una cuantificación de la cantidad y 
+                ubicación de estos elementos, traduciendo los resultados en la 
+                calidad del servicio, la experiencia y la satisfacción del usuario.<br><br>
+
+                La evaluación de la infraestructura efectiva en los senderos costeros 
+                asegura que los elementos de mobiliario urbano estén adecuadamente 
+                distribuidos y en cantidad suficiente, mejorando la comodidad, 
+                seguridad y satisfacción de los usuarios.<br><br>
+
+                Para su evaluación, se considera la disposición de cada equipamiento 
+                en relación a la superficie de espacio verde. Se asignan puntajes 
+                y pesos específicos basados en las respuestas de los usuarios a 
+                las encuestas. Los puntajes varían de acuerdo a la distribución de los equipamientos
+                (0) Equipamientos ubicados en un espacio mayor a 200 m² entre sí.
+                (1) Disposición igual o menor a 200 m².
+                (2) Distribución de equipamiento menor a 100 m² entre sí.
+                (3) Disposición menor a 50 m² entre sí.
+                La puntuación se realiza mediante una matriz de variables ponderadas: 
+                [Σ(Pi*Ci)]/n, donde (P) representa el puntaje, (i) refiere a cada 
+                una de las variables, (C) representa el coeficiente asignado a cada 
+                variable, y (n) es el número total de variables evaluadas. 
+                Se otorga mayor importancia a la existencia de bancos (coeficiente 1.3) 
+                en comparación con cestos de residuos (1.2), luminarias (1) y bebederos (0.6).
+
+            </p>
+            <img class="parametro" src="imgs\parametros\parametros8.jpeg" alt="Parámetros de variable">
+        </div>
+    
+        <div class="acercaDe" id="v9">
+            <p class="intro-instruccion">
+            <span class="subtitulo-instruc">9. Mantenimiento Eficiente - Estado y mantenimiento de servicios, mobiliario, senderos y vegetación, entre otros.</span><br>
+                El índice de conservación se utiliza para evaluar el estado y manutención de servicios, 
+                mobiliario urbano, la costa del río, senderos y vegetación en el entorno. 
+                Este enfoque busca determinar la efectividad, eficiencia y calidad de las acciones 
+                implementadas en la gestión del espacio, con el fin de garantizar un entorno seguro, 
+                limpio y en buen estado de conservación. La evaluación se realiza mediante inspecciones 
+                físicas y encuestas a los usuarios, proporcionando una visión integral de la situación y 
+                permitiendo identificar áreas de mejora.<br><br>
+            
+                La evaluación del estado y conservación de los senderos costeros permite identificar 
+                áreas de mejora y focalizar esfuerzos en aquellos aspectos que son más relevantes para 
+                los usuarios, garantizando un entorno seguro y bien mantenido.<br><br>
+
+                Se realiza una evaluación física del área y encuestas a los usuarios para obtener 
+                información sobre la percepción del estado general del predio. Se asignan pesos 
+                específicos a cada variable mediante un coeficiente graduado, y se calcula la 
+                puntuación de mantenimiento eficiente utilizando una matriz de variables ponderadas: 
+                [Σ(Pi*Ci)]/n, donde (P) representa el puntaje asignado, (i) refiere a cada una de 
+                las cinco variables evaluadas, y (C) representa el coeficiente asignado a cada variable.
+                Se otorga mayor importancia a la conservación de la vegetación (coeficiente 1.3), 
+                seguida del mobiliario urbano (coeficiente 1.2), los senderos (coeficiente 1.1), 
+                el mantenimiento de la costa del río (coeficiente 0.8) y los servicios ofrecidos (coeficiente 0.7).
+
+                </p>
+            <img class="parametro" src="imgs\parametros\parametros9.jpeg" alt="Parámetros de variable">
+        </div>
+    
+        <div class="acercaDe" id="v10">
+            <p class="intro-instruccion">
+            <span class="subtitulo-instruc">10. Patrimonio e Identidad - Manejo y valoración de elementos y manifestaciones históricas y culturales del predio.</span><br>
+                El indicador de patrimonio e identidad evalúa la capacidad del sendero costero para 
+                preservar y destacar los elementos culturales, históricos y naturales del área. 
+                Este enfoque considera la importancia de mantener la integridad de los valores patrimoniales 
+                y de identidad del entorno, promoviendo el sentido de pertenencia y la conexión de la 
+                comunidad con su entorno. La evaluación se realiza a través de la identificación y valoración 
+                de elementos significativos en el paisaje, la infraestructura y las actividades culturales.<br><br>
+
+                La evaluación del patrimonio e identidad en los senderos costeros permite fortalecer la 
+                conexión de la comunidad con su entorno, promoviendo una experiencia enriquecedora y 
+                garantizando la preservación de los valores culturales, históricos y naturales del área.<br><br>
+
+                Se identifican y valoran los elementos significativos en el paisaje, la infraestructura y las 
+                actividades culturales del sendero costero. Se asignan puntajes y pesos específicos a cada 
+                uno de estos elementos, basados en su relevancia y contribución a la identidad del área. 
+                La evaluación se realiza utilizando una matriz de variables ponderadas: [Σ(Pi*Ci)]/n, 
+                donde (P) representa el puntaje asignado, (i) refiere a cada uno de los elementos evaluados, 
+                y (C) representa el coeficiente asignado a cada elemento.
+                </p>
+            <img class="parametro" src="imgs\parametros\parametros10.jpeg" alt="Parámetros de variable">
+        </div>
+
+    </div>
+</body>
+</html>
