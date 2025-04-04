@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Proyecto COAST - Senderos Costeros Sustentables">
+        <meta name="description" content="Tesis de la maestría en SAU. FADU - UBA. Herramienta con base prestacional para el relevamiento y análisis de senderos costeros urbanos. ">
+        <title>Proyecto COAST - Senderos Costeros Sustentables</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body style="background-image: url(imgs/COAST-lineas-fondo.png); background-repeat: no-repeat; ">
+
+
+    <div class="contenedor-header">
+        <div class="vinculo" id="acerca"><a href="ACERCA.html" id="textoAcerca">Instrucciones</a></div>
+        <div class="vinculo" id="centro"><img id="logo" src="imgs\COAST_LOGO.png" alt="COAST-logo"></div>
+        <div class="vinculo" id="fuente"><a href="FUENTE.html" id="textoFuente">Fuente</a></div>
+    </div>
+
+    <div class="HEAD">
+        <h1 id="instruc">Referencia</h1>
+        <p>Cantidad de suelo cubierto por vegetación</p>
+      </div>
+      
+    <div class="referencia">
+      <p><span class="subtitulo-instruc">1. NDVI - Cantidad de suelo cubierto por vegetación.</span> <br>
+        Esta estrategia se basa en el procesamiento de imágenes satelitales para medir la 
+        cantidad de vegetación utilizando el Índice de Vegetación de Diferencia Normalizada (NDVI),
+         que varía de -1.0 a 1.0, utilizado para identificar y cuantificar la cobertura vegetal, 
+         donde valores negativos indican ausencia de vegetación y valores superiores a 0.6 indican 
+         una alta cobertura vegetal.<br><br>
+        Proporciona alimento y refugio a la fauna, y controla erosión y regula el ciclo de agua.
+        Su <strong>implementación</strong> es la siguiente: <br><br>
+        Software Recomendado: Software de uso libre, gratuito y de fácil manejo para procesar 
+        las imágenes satelitales o tomadas por el usuario. QGIS (Qgis.org), Land Viewer 
+        (eos.com/landviewer).
+        Alternativa Manual: Es posible realizar una evaluación visual. 
+        Sin embargo, esta carecerá de la precisión tecnológica que ofrece el NDVI.<br>
+        </p>
+        <img class="parametro" src="imgs\parametros\parametros1.png" alt="Parámetros de variable">
+    </div>
+
+    </body>
+</html>
