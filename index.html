@@ -20,9 +20,9 @@
 <div class="header-tabla">
 
   <div class="contenedor-header">
-    <div class="vinculo" id="acerca"><a href="ACERCA" id="textoAcerca">Instrucciones</a></div>
+    <div class="vinculo" id="acerca"><a href="ACERCA.html" id="textoAcerca">Instrucciones</a></div>
     <div class="vinculo" id="centro"><img id="logo" src="imgs\COAST_LOGO.png" alt="COAST-logo"></div>
-    <div class="vinculo" id="fuente"><a href="FUENTE" id="textoFuente">Fuente</a></div>
+    <div class="vinculo" id="fuente"><a href="FUENTE.html" id="textoFuente">Fuente</a></div>
   </div>
 
   <div class="contenedor-tabla" id="tabla">
@@ -32,7 +32,7 @@
       <div class="caja-variable" id="Variable1">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\1.png" alt="Decagono-v1">
-          <a href="1-Cobertura-Vegetal"><p class="titulo-var" >COBERTURA VEGETAL</p></a>
+          <a href="1-Cobertura-Vegetal.html"><p class="titulo-var" >COBERTURA VEGETAL</p></a>
         </div>
         <div class="caja-variable-bottom">
           <p class="etiqueta">Índice vegetación de<br>diferencia normalizada<br>NDVI</p>
@@ -42,15 +42,6 @@ NDVI &lt 0.4 es vegetación escasa
 0.4 &lt NDVI &lt 0.6 es vegetación moderada 
 NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área" 
         placeholder="-1 a 1" required>
-        <div class="icono" id="info1">
-          <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-          <div class="popup" id="popupv1">
-            NDVI Negativo indica ausencia de vegetación<br>
-              NDVI &lt 0.4 señala vegetación escasa<br>
-              0.4 &lt NDVI &lt 0.6 indica vegetación moderada<br>
-              NDVI &gt 0.6 indica alta cobertura vegetal en más del 60% del área<br>
-        </div>
-        </div>
         </div>
       </div>
 
@@ -58,7 +49,7 @@ NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área"
       <div class="caja-variable" id="Variable2">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\2.png" alt="Decagono-v2">
-          <a href="2-Estructura-Vegetal"><p class="titulo-var">ESTRUCTURA VEGETAL</p></a>
+          <a href="2-Estructura-Vegetal.html"><p class="titulo-var">ESTRUCTURA VEGETAL</p></a>
         </div>
         <div class="caja-variable-bottom">
           <p class="etiqueta">Índice vegetación<br>de suelo modificado<br>MSAVI</p>
@@ -68,23 +59,13 @@ NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área"
 0.2 &lt MSAVI &lt 0.4 es presencia de pastizales y arbustos
 0.4 &lt MSAVI &lt 1 es una estructura vegetal leñosa" 
           placeholder="-1 a 1" min="-1" max="1" step=".01" size="7"><br>
-          <div class="icono" id="info2">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv2">
-            MSAVI Negativo indica ausencia de vegetación<br>
-            0 &lt MSAVI &lt 0.2 señala vegetación herbácea escasa<br>
-            0.2 &lt MSAVI &lt 0.4 es presencia de pastizales y arbustos<br>
-            0.4 &lt MSAVI &lt 1 indica una estructura vegetal leñosa<br>
-            </div>
-
-          </div>
         </div>
       </div>
 
       <div class="caja-variable" id="Variable3">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\3.png" alt="Decagono-v3">
-          <a href="3-Conectividad-Integral"><p class="titulo-var">CONECTIVIDAD INTEGRAL</p></a>
+          <a href="3-Conectividad-Integral.html"><p class="titulo-var">CONECTIVIDAD INTEGRAL</p></a>
         </div>
         <div class="caja-variable-bottom2">
           <label for="v3.1" class="etiqueta">Conectividad del paisaje</label>
@@ -93,16 +74,9 @@ NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área"
 0.25 &lt X &lt 0.5 es vegetación en 'parches' cubriendo el 50% del área
 0.5 &lt X &lt 0.75 es vegetación arbórea y arbustiva hasta el 75% del área
 0.75 &lt X es un corredor denso con vegetación en más del 75% del predio">
-          <div class="icono" id="info3-1">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv3-1">
-            X &lt 0.25 indica vegetación en parches aislados con menos del 25% de cobertura vegetal leñosa<br>
-            0.25 &lt X &lt 0.5 señala vegetación en "parches" cubriendo el 50% del área<br>
-            0.5 &lt X &lt 0.75 es vegetación arbórea y arbustiva cubriendo hasta el 75% del área<br>
-            0.75 &lt X es un corredor denso en el ecosistema con vegetación en más del 75% del predio<br>
-            </div>
-          </div>
         </div>
+
+
         <div class="caja-variable-bottom2">
           <label for="v3.2" class="etiqueta">Conectividad de los senderos</label>
           <input type="number" id="v3.2" name="v3.2" placeholder="0 a 10" min="0" max="10" maxlength="3" size="7"
@@ -110,15 +84,6 @@ NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área"
 2 &lt X &lt 4 indica una conectividad poco eficaz
 4 &lt X &lt 6 es un corredor aclarado con buena conectividad entre áreas
 6 &lt X indica una excelente conectividad entre áreas">
-          <div class="icono" id="info3-2">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv3-2">
-            X &lt 2 refiere a una mala conectividad de espacios entre senderos<br>
-            2 &lt X &lt 4 indica una conectividad poco eficaz<br>
-            4 &lt X &lt 6 es un corredor aclarado con buena conectividad entre áreas<br>
-            6 &lt X indica una excelente conectividad entre áreas<br>
-            </div>
-          </div>
         </div>   
       </div>
     </div>
@@ -127,7 +92,7 @@ NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área"
       <div class="caja-variable" id="Variable4">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\4.png" alt="Decagono-v4">
-          <a href="4-Accesibilidad-Eficiente"><p class="titulo-var">ACCESIBILIDAD EFICIENTE</p></a>
+          <a href="4-Accesibilidad-Eficiente.html"><p class="titulo-var">ACCESIBILIDAD EFICIENTE</p></a>
         </div>
         <div class="caja-variable-bottom2">
           <label for="v4.1" class="etiqueta">Uniformidad</label>
@@ -135,55 +100,29 @@ NDVI &gt 0.6 es alta cobertura vegetal en más del 60% del área"
           title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Refiere a las grietas, huecos y desniveles en la superficie del camino, 
 y el ancho del mismo para sillas de ruedas.">
-          <div class="icono" id="info4-1">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv4-1">
-            Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-            <br>Refiere a las grietas, huecos y desniveles en la superficie del camino, y el ancho del mismo para sillas de ruedas.
-            </div>
-          </div>
         </div>
+
         <div class="caja-variable-bottom2">
           <label for="v4.2" class="etiqueta">Rugosidad</label>
           <input type="number" id="v4.2" name="v4.2" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7" 
           title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Refiere al nivel de adherencia y control de la superficie del camino.">
-          <div class="icono" id="info4-2">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv4-2">
-              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-              <br>Refiere al nivel de adherencia y control de la superficie del camino.
-
-            </div>
-          </div>
         </div>
+
         <div class="caja-variable-bottom2">
           <label for="v4.3" class="etiqueta">Podotáctil</label>
           <input type="number" id="v4.3" name="v4.3" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7" 
           title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Refiere a la cobertura de barandas podotáctiles en los senderos 
 para la guía accesible de los no videntes.">
-          <div class="icono" id="info4-3">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv4-3">
-              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-              <br>Refiere a la cobertura de barandas podotáctiles en los senderos para la guía accesible de los no videntes.
-            </div>
-          </div>
         </div>
+
         <div class="caja-variable-bottom2">
           <label for="v4.4" class="etiqueta">Barandas</label>
           <input type="number" id="v4.4" name="v4.4" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7" 
           title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Refiere a la cobertura de barandas en rampas, escaleras y zonas de peligro, 
 que brindan un apoyo adicional.">
-          <div class="icono" id="info4-4">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv4-4">
-              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-              <br>Refiere a la cobertura de barandas en rampas, escaleras y zonas de peligro, que brindan un apoyo adicional.
-            </div>
-          </div>
         </div>
         <div class="caja-variable-bottom2">
           <label for="v4.5" class="etiqueta">Rampas</label>
@@ -191,20 +130,13 @@ que brindan un apoyo adicional.">
           title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Refiere a la cobertura de rampas de acceso para el tránsito de sillas de ruedas 
 y otros dispositivos de asistencia.">
-          <div class="icono" id="info4-5">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv4-5">
-              Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-              <br>Refiere a la cobertura de rampas de acceso para el tránsito de sillas de ruedas y otros dispositivos de asistencia.
-            </div>
-          </div>
         </div>
   </div>
 
 <div class="caja-variable" id="Variable5">
   <div class="caja-variable-top">
     <img class="decagono" src="imgs\Decagonos\5.png" alt="Decagono-v5">
-    <a href="5-Adecuación-Servicios"><p class="titulo-var">ADECUACIÓN DE SERVICIOS</p></a>
+    <a href="5-Adecuación-Servicios.html"><p class="titulo-var">ADECUACIÓN DE SERVICIOS</p></a>
   </div>
   <div class="caja-variable-bottom2">
     <label for="v5.1" class="etiqueta">Iluminación</label>
@@ -212,42 +144,21 @@ y otros dispositivos de asistencia.">
     title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Mide el nivel de uniformidad, contraste y distribución de luz según la 
 norma IRAM 11607:2011">
-    <div class="icono" id="info5-1">
-      <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-      <div class="popup" id="popupv5-1">
-        Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-        <br>Mide el nivel de uniformidad, contraste y distribución de luz según la norma IRAM 11607:2011
-      </div>
-
-    </div>
   </div>
+
   <div class="caja-variable-bottom2">
     <label for="v5.2" class="etiqueta">Bebederos</label>
     <input type="number" id="v5.2" name="v5.2" placeholder="0 a 100" min="0" max="100" maxlength="3" size="9" 
     title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Mide la cobertura de bebederos en el predio.">
-    <div class="icono" id="info5-2">
-      <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-      <div class="popup" id="popupv5-2">
-        Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-        <br>Mide la cobertura de bebederos en el predio.
-      
-      </div>
-    </div>
   </div>
+
   <div class="caja-variable-bottom2">
     <label for="v5.3" class="etiqueta">Mobilidad</label>
     <input type="number" id="v5.3" name="v5.3" placeholder="0 a 100" min="0" max="100" maxlength="3" size="9" 
     title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Mide la cobertura de asientos con respaldo, sectores de ejercitación y 
 recreación adaptado a personas con movilidad reducida según la norma IRAM 3600:2019"><br>
-    <div class="icono" id="info5-3">
-      <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-      <div class="popup" id="popupv5-3">
-        Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-        <br>Mide la cobertura de asientos con respaldo, sectores de ejercitación y recreación adaptado a personas con movilidad reducida según la norma IRAM 3600:2019
-      </div>
-    </div>
   </div>
 </div>
 
@@ -255,34 +166,21 @@ recreación adaptado a personas con movilidad reducida según la norma IRAM 3600
   <div class="caja-variable" id="Variable6">
     <div class="caja-variable-top">
       <img class="decagono" src="imgs\Decagonos\6.png" alt="Decagono-v6">
-      <a href="6-Señalizacion-Inclusiva"><p class="titulo-var">SEÑALIZACIÓN INCLUSIVA</p></a>
+      <a href="6-Señalizacion-Inclusiva.html"><p class="titulo-var">SEÑALIZACIÓN INCLUSIVA</p></a>
     </div>
     <div class="caja-variable-bottom2">
       <label for="v6.1" class="etiqueta">Efectividad</label>
       <input type="number" id="v6.1" name="v6.1" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7" 
       title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Mide la provisión, orientación y ubicación de la cartelería según la norma IRAM 10005.">
-      <div class="icono" id="info6-1">
-        <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-        <div class="popup" id="popupv6-1">
-          Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-        <br>Mide la provisión, orientación y ubicación de la cartelería según la norma IRAM 10005.  
-        </div>
-      </div>
     </div>
+
     <div class="caja-variable-bottom2">
       <label for="v6.2" class="etiqueta">Asistencia</label>
       <input type="number" id="v6.2" name="v6.2" placeholder="0 a 100" min="0" max="100" maxlength="3" size="7" 
       title="Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
 Mide la cobertura de 'tecnología asistencial' (Braille, QR, Mapas con relieve) 
 según la norma IRAM 10005">
-      <div class="icono" id="info6-2">
-        <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-        <div class="popup" id="popupv6-2">
-          Medida en las llaves de 0-50 / 50-70 / 70-90 / 90-100.
-        <br>Mide la cobertura de "tecnología asistencial" (Braille, QR, Mapas con relieve) según la norma IRAM 10005
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -293,7 +191,7 @@ según la norma IRAM 10005">
       <div class="caja-variable" id="Variable7">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\7.png" alt="Decagono-v7">
-          <a href="7-Confort-Espacios"><p class="titulo-var">CONFORT EN ESPACIOS</p></a>
+          <a href="7-Confort-Espacios.html"><p class="titulo-var">CONFORT EN ESPACIOS</p></a>
         </div>
         <div class="caja-variable-bottom" id="box-7">
           <p class="etiqueta">Áreas asignadas<br>al bienestar</p>
@@ -301,13 +199,6 @@ según la norma IRAM 10005">
           title="Medido en llaves de 0-3 / 3-5 / 5-7 / +7
 Áreas de bienestar son zonas de descanso, libre de humo y ruido, áreas de picnic, 
 espacios para actividades sociales, deportes, recreación, entre otros.">
-          <div class="icono" id="info7">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv7">
-            Medido en llaves de 0-3 / 3-5 / 5-7 / +7<br>
-            Áreas de bienestar son zonas de descanso, libre de humo y ruido, áreas de picnic, espacios para actividades sociales, deportes, recreación, entre otros.
-            </div>
-          </div>
         </div>
       </div>
 
@@ -315,60 +206,34 @@ espacios para actividades sociales, deportes, recreación, entre otros.">
       <div class="caja-variable" id="Variable8">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\8.png" alt="Decagono-v8">
-          <a href="8-Infraestructura-Efectiva"><p class="titulo-var">INFRAESTRUCTURA EFECTIVA</p></a>
+          <a href="8-Infraestructura-Efectiva.html"><p class="titulo-var">INFRAESTRUCTURA EFECTIVA</p></a>
         </div>
         <div class="caja-variable-bottom3">
           <label for="v8.1" class="etiqueta">Entre bancos</label>
           <input type="number" id="v8.1" name="v8.1" placeholder="en m2" min="0" maxlength="5" size="7" 
           title="Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m
 Mide la distancia, en metros cuadrados, entre los bancos de descanso.">
-          <div class="icono" id="info8-1">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv8-1">
-              Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
-              Mide la distancia, en metros cuadrados, entre los bancos de descanso.
-            </div>
-          </div>
         </div>
+
         <div class="caja-variable-bottom3">
           <label for="v8.2" class="etiqueta">Entre cestos</label>
           <input type="number" id="v8.2" name="v8.2" placeholder="en m2" min="0" maxlength="5" size="7" 
           title="Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m
 Mide la distancia, en metros cuadrados, entre los cestos de basura.">
-          <div class="icono" id="info8-2">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv8-2">
-              Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
-              Mide la distancia, en metros cuadrados, entre los cestos de basura.
-            </div>
-          </div>
         </div>
+
         <div class="caja-variable-bottom3">
           <label for="v8.3" class="etiqueta">Bebederos</label>
           <input type="number" id="v8.3" name="v8.3" placeholder="en m2" min="0" maxlength="5" size="7" 
           title="Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m
 Mide la distancia, en metros cuadrados, entre los bebederos.">
-          <div class="icono" id="info8-3">
-            <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-            <div class="popup" id="popupv8-3">
-              Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
-              Mide la distancia, en metros cuadrados, entre los bebederos.
-            </div>
-          </div>
         </div>
+
       <div class="caja-variable-bottom3">
         <label for="v8.4" class="etiqueta">Luminarias</label>
         <input type="number" id="v8.4" name="v8.4" placeholder="en m2" min="0" maxlength="5" size="7" 
         title="Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m
 Mide la distancia, en metros cuadrados, entre equipamiento de luminaria.">
-        <div class="icono" id="info8-4">
-          <img class="info" src="imgs\icono-info.png" alt="icono-preg">
-          <div class="popup" id="popupv8-4">
-            Medido en llaves de +200m / 200m-100m / 100m-50m / &gt 50m<br>
-            Mide la distancia, en metros cuadrados, entre equipamiento de luminaria.
-          </div>
-          
-        </div>
       </div>
       </div>
         <button id="generar">GENERAR</button>    
@@ -379,7 +244,7 @@ Mide la distancia, en metros cuadrados, entre equipamiento de luminaria.">
       <div class="caja-variable" id="Variable9">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\9.png" alt="Decagono-v2">
-          <a href="9-Mantenimiento"><p class="titulo-var">MANTENIMIENTO EFICIENTE</p></a>
+          <a href="9-Mantenimiento.html"><p class="titulo-var">MANTENIMIENTO EFICIENTE</p></a>
           <div class="popup" id="popupv1">Información</div>
         </div>
           <div class="caja-variable-bottom2">
@@ -443,7 +308,7 @@ Mide la distancia, en metros cuadrados, entre equipamiento de luminaria.">
       <div class="caja-variable" id="Variable10">
         <div class="caja-variable-top">
           <img class="decagono" src="imgs\Decagonos\10.png" alt="Decagono-v10">
-          <a href="10-Patrimonio-Identidad"><p class="titulo-var">PATRIMONIO E IDENTIDAD</p></a>
+          <a href="10-Patrimonio-Identidad.html"><p class="titulo-var">PATRIMONIO E IDENTIDAD</p></a>
         </div>
         <div class="caja-variable-bottom2">
           <form action="#">
