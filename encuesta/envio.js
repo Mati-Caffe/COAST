@@ -8,6 +8,7 @@
   const status = document.getElementById('status');
   const button = form.querySelector('button[type="submit"]');
   const consent = document.getElementById('consent');
+  consent.addEventListener('change',()=>{if(consent.checked)document.getElementById('consent-error').hidden=true;});
   const fields = ['horizontal','escalera'].flatMap(s=>[1,2,3,4,5].map(n=>`${s}_q${n}`));
   const key = 'fadu-envio-pendiente-v1';
   let pending = null, busy = false, submitted = false;
@@ -41,7 +42,7 @@ script.src=url.href;document.head.appendChild(script);
     return false;
   }
   function answers() {
-    if(!consent.checked){message('Confirmá el consentimiento en “Información y consentimiento”.','error');consent.focus();return null;}
+    if(!consent.checked){document.getElementById('consent-error').hidden=false;message('Para enviar, marcá el consentimiento junto al botón.','error');document.getElementById('consent-area').scrollIntoView({behavior:'smooth',block:'center'});consent.focus({preventScroll:true});return null;}
     const values={};
     for(const k of fields) {
       const scenario=k.split('_')[0];
