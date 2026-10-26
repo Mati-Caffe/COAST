@@ -26,7 +26,8 @@
       window[callback]=data=>{cleanup();resolve(data);};
       script.onerror=()=>{cleanup();reject(new Error('Sin conexión con el registro.'));};
       timer=setTimeout(()=>{cleanup();reject(new Error('Tiempo de espera agotado.'));},8000);
-      script.src=url.href;document.head.appendChild(script);
+      script.crossOrigin = 'anonymous';
+script.src=url.href;document.head.appendChild(script);
     });
   }
   async function confirmed() {
