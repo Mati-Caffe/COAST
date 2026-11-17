@@ -1,14 +1,24 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Modelo de Potencial Mecánico Recuperable Situado · v0.16</title>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Modelo de Potencial Mecánico Recuperable Situado · v0.18</title>
 <style>
 :root{--r:#b94b4b;--y:#c39a25;--g:#438b58;--ink:#252525;--mut:#6d6d69;--bg:#f2f2ef;--line:#d8d8d3;--soft:#f7f7f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,sans-serif;color:var(--ink)}main{max-width:1220px;margin:auto;padding:24px}.hero h1{margin:0;font-size:29px}.hero p{margin:6px 0 18px;color:var(--mut)}.card{background:#fff;border-radius:14px;padding:22px 24px;margin:14px 0;box-shadow:0 2px 11px #0000000b}.k{font-size:11px;letter-spacing:.11em;font-weight:700;color:#777}h2{font-size:19px;margin:5px 0 15px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:13px}label{display:block;font-size:12px;font-weight:700;margin-bottom:5px}input,select{width:100%;padding:10px;border:1px solid #bbb;border-radius:8px;background:white}.hidden{display:none}.note{font-size:12px;line-height:1.4;color:var(--mut);margin:8px 0 0}.fph{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:14px}.panel{background:var(--soft);border:1px solid var(--line);border-radius:11px;padding:15px}.panel h3{margin:3px 0 12px;font-size:16px}.funcs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fcard,.techbtn{border:1px solid #d0d0cb;background:#fff;border-radius:9px;padding:10px;text-align:left;cursor:pointer}.fcard b,.techbtn b{display:block}.fcard small{display:block;color:#777;margin-top:4px;line-height:1.25}.fcard.on,.techbtn.on{border:2px solid #222;padding:9px}.help{font-size:12px;color:#666;margin:0 0 8px;line-height:1.35}.techrow{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.techbtn{text-align:center;padding:13px 8px}.techbtn.on{padding:12px 7px}.result{display:grid;grid-template-columns:minmax(500px,1.2fr) minmax(300px,.8fr);gap:22px;align-items:center}canvas{width:100%;max-width:670px;aspect-ratio:1}.metric{padding:12px 0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.metric label{color:#666}.big{font-size:31px;font-weight:800}.state{font-size:25px;font-weight:800}.error{display:none;border-left:4px solid var(--r);background:#fff1f1;border-radius:8px;padding:11px 13px;margin:12px 0;font-size:13px}.missing{border:2px solid var(--r)!important;background:#fff8f8!important}.action{padding:11px 15px;border:0;border-radius:8px;background:#222;color:#fff;font-weight:700;cursor:pointer}.action.secondary{background:#e8e8e5;color:#222}.sep{border:0;border-top:1px solid var(--line);margin:16px 0}.tiny{font-size:11px;color:#777}.comparegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tag{display:inline-block;padding:5px 8px;border-radius:999px;background:#eee;font-size:11px;font-weight:700}.period-extra{margin-top:8px}@media(max-width:850px){.fph,.result{grid-template-columns:1fr}.techrow{grid-template-columns:1fr 1fr}}@media(max-width:520px){.funcs,.techrow{grid-template-columns:1fr}}
 
 .iconTitle{display:flex;align-items:center;gap:9px}.ico{width:28px;height:28px;border:1.5px solid #7894ad;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:#5f7f9b;flex:0 0 auto}.ico svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.fieldhead{min-height:30px;line-height:1.15}.resultCard{border-radius:12px;padding:10px}.resultCard.g,.resultCard.y,.resultCard.r{background:transparent;animation:none}.status.g{color:var(--g)}.status.y{color:var(--y)}.status.r{color:var(--r)}@keyframes redPulse{0%,100%{background:#fff1f1;box-shadow:0 0 0 rgba(185,75,75,0)}50%{background:#ffe3e3;box-shadow:0 0 0 4px rgba(185,75,75,.08)}}.pulseDot{animation:dotPulse 1.8s ease-in-out infinite;transform-origin:center}@keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.38}}.techrow{grid-template-columns:repeat(5,1fr)}.projectgrid{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:900px){.projectgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.projectgrid{grid-template-columns:1fr}.techrow{grid-template-columns:1fr 1fr}}
-</style></head><body><main>
-<div class="hero"><h1>Modelo de Potencial Mecánico Recuperable Situado</h1><p>Motor PEATONAL · prototipo operativo v0.16</p></div>
+
+.coverage{grid-column:1/-1}.coverage .help{margin-bottom:9px}.coverage-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.coverage-btn{min-width:0;border:1px solid #c8d1d5;border-radius:8px;background:#fff;padding:9px 3px;text-align:center;color:var(--ink);cursor:pointer;display:flex;align-items:center;flex-direction:column;gap:3px}.coverage-btn svg{width:64px;height:42px;display:block;flex-shrink:0}.coverage-btn b{font-size:13px;line-height:1.2}.coverage-btn span{font-size:11px;line-height:1.2;white-space:nowrap}.coverage-btn.on{outline:2px solid #356879;outline-offset:-2px;background:#edf5f7}.coverage-btn:focus-visible{outline:3px solid #356879;outline-offset:2px}.coverage details{font-size:11px;line-height:1.5;color:#666;margin-top:9px}.coverage summary{cursor:pointer}.coverage a{color:#356879}.coverage-legend{margin-top:7px;font-size:10px;color:#777}.coverage-legend i{display:inline-block;background:#356879;width:9px;height:9px;margin-right:4px}.flowdetail{font-size:12px;line-height:1.45;color:#666;margin-top:5px}@media(max-width:520px){.coverage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.custom-tech{margin-top:12px;padding:12px;border:1px solid #c8d1d5;border-radius:9px;background:var(--soft)}
+.custom-tech h3{margin:0 0 8px}.custom-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:8px}
+.custom-grid .wide{grid-column:1/-1}.custom-details{display:flex;gap:6px 18px;flex-wrap:wrap;margin-top:8px;font-size:13px}
+.custom-details summary{cursor:pointer}.custom-details details[open]{flex-basis:100%}.custom-details p{margin:6px 0}
+.result-actions,.export-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.export-row[hidden]{display:none}
+@media(max-width:640px){.custom-grid{grid-template-columns:1fr 1fr}.custom-grid .name{grid-column:1/-1}}
+@media(max-width:400px){.custom-grid{grid-template-columns:1fr}}
+.flywheel-buttons{display:flex;gap:10px;flex-wrap:wrap}.flywheel-btn{padding:11px 20px;border-radius:8px;border:1px solid #b9c5cc;background:white;font:inherit;font-weight:700;cursor:pointer}.flywheel-btn.on{border:2px solid #356879;background:#edf5f7;color:#184f61}.lookup-status{font-size:12px;color:#37505a;display:flex;flex-basis:100%;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.35;margin-top:2px}.lookup-status:empty{display:none}.lookup-status .status-line{display:block}.lookup-status .status-loading{display:flex;align-items:center;gap:8px}.spinner{height:17px;width:17px;display:inline-block;flex-shrink:0;border:2px solid #d4dee2;border-top-color:#356879;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.econ-final{border-top:1px solid #d8d8d3;padding-top:12px;grid-column:1/-1}.econ-final #usdOut{font-size:23px;font-weight:750}.econ-final #economicSource{margin-top:5px}.econ-final a{color:#356879}@media(max-width:720px){.lookup-status{width:100%}}
+.grid>div{min-width:0}input,select{min-width:0}.result.result-layout{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-areas:"radar energy" "fph access";align-items:start;gap:18px 30px;margin-top:18px}.result-radar{grid-area:radar;align-self:start}.result-radar canvas{display:block;width:100%;max-width:530px;margin:0 auto}.result-energy{grid-area:energy;align-self:start}.result-fph{grid-area:fph;padding:0 12px}.result-access{grid-area:access}.result-energy .metric:first-child,.result-access .metric:first-child{padding-top:0}.result-energy .tiny{line-height:1.45}.fp-item{padding:12px 0;border-bottom:1px solid var(--line)}.fp-item:first-child{padding-top:0}.fp-item .status{font-size:20px;font-weight:700}.state-reasons{font-size:12px;line-height:1.5;color:#555;margin-top:6px;white-space:pre-line}.state-reasons[hidden]{display:none}.intervention-summary{padding-top:18px}.compare-panel{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}.compare-panel h3{margin:0 0 10px;font-size:17px}.compare-controls{display:grid;grid-template-columns:1fr 1fr auto;align-items:end;gap:12px}.compare-output{margin-top:16px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:30px;align-items:start}.compare-output[hidden]{display:none}.compare-output canvas{display:block;width:100%;max-width:530px}.compare-option{padding:14px;border:1px solid var(--line);border-radius:9px;margin-bottom:12px}.compare-option strong{display:block;font-size:14px;margin-bottom:8px}.compare-option .compare-energy{font-size:25px;font-weight:800}.compare-note{font-size:12px;line-height:1.45;color:#666}.compare-error{color:var(--r);font-size:12px;margin-top:8px}.compare-error:empty{display:none}@media(max-width:850px){.result.result-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"radar" "energy" "fph" "access";gap:20px}.result-fph{padding:0}.compare-output{grid-template-columns:minmax(0,1fr)}}@media(max-width:580px){.compare-controls{grid-template-columns:minmax(0,1fr)}.resultCard{padding:5px 0}.result-layout .big{font-size:28px}}.person-field-label{min-height:30px;line-height:1.2}#dispHint{white-space:pre-line;line-height:1.5;margin-top:5px}.result-actions{align-items:center}.lookup-status{flex:1 1 270px;margin-top:0}.lookup-status:empty{display:none}.result.result-layout{row-gap:8px}.result-radar canvas{aspect-ratio:700/640;height:auto}.result-fph{padding-top:0}.result-fph .fp-item:first-child{padding-top:0}@media(max-width:720px){.lookup-status{flex-basis:100%;margin-top:4px}.person-field-label{min-height:44px}}#circulationDetail[hidden]{display:none}.result-radar canvas{aspect-ratio:700/590}.result-fph .status,.intervention-summary .state{font-size:20px;font-weight:700}#analysisDate{display:inline-block;font-size:14px;font-weight:700;line-height:1.4;color:var(--ink);padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--soft)}</style></head><body><main>
+<div class="hero"><h1>Modelo de Potencial Mecánico Recuperable Situado</h1><p>Motor PEATONAL · V18</p></div>
 <section class="card"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h6"/></svg></span><span>PROYECTO</span></div><div class="grid projectgrid">
 <div><label class="fieldhead">Nombre del<br>proyecto</label><input id="project"></div>
-<div><label class="fieldhead">Tipo de<br>interacción</label><select id="interaction"><option value="Peatonal">Peatonal</option><option>Vehicular</option><option>Puerta / elemento móvil</option><option>Vibración</option></select></div>
-<div><label class="fieldhead">Período de<br>análisis</label><select id="period" onchange="periodChange()"><option value="hour">1 hora</option><option value="day">1 día</option><option value="other">Otro</option></select><div id="otherPeriod" class="period-extra hidden"><label>Duración del período (días)</label><input id="days" type="number" min="2" step="1"></div></div>
+<div><label class="fieldhead">Tipo de<br>interacción</label><select id="interaction"><option value="">Seleccionar</option><option value="Peatonal">Peatonal</option><option>Vehicular</option><option>Puerta / elemento móvil</option><option>Vibración</option></select></div>
+<div><label class="fieldhead">Período de<br>análisis</label><select id="period" onchange="periodChange()"><option value="">Seleccionar</option><option value="hour">1 hora</option><option value="day">1 día</option><option value="other">Otro</option></select><div id="otherPeriod" class="period-extra hidden"><label>Duración del período (días)</label><input id="days" type="number" min="2" step="1"></div></div>
 <div><label class="fieldhead">Demanda energética<br>requerida por el usuario [Wh]</label><input id="demand" type="number" min="0.001" step="any"></div>
 </div><p class="note">Para períodos mayores a un día, ingrese los datos correspondientes al período completo. El modelo calculará automáticamente el valor medio diario representativo. La demanda y la cantidad de personas deben referirse al mismo período.</p></section>
 
@@ -20,49 +30,265 @@
 <button class="fcard" data-v="Especial"><b>Especial</b><small>hospitalaria · asistencia · traslado · seguridad</small></button>
 </div></div>
 <div class="panel"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v6m0-3-4 3m4-3 4 3m-4 0-3 6m3-6 4 6"/></svg></span><span>PERSONA</span></div><h3>Interacción peatonal</h3><div class="grid" style="grid-template-columns:1fr 1fr">
-<div><label>Cantidad de personas durante el período analizado</label><input id="people" type="number" min="1" step="1"></div><div><label>Longitud del recorrido [m] (escalera: inclinada)</label><input id="length" type="number" min="0.1" step="any"></div>
-<div><label>Condición de marcha</label><select id="walk" onchange="walkChange()"><option value="">Seleccionar</option><option>Horizontal</option><option>Pendiente</option><option>Escalera</option></select></div><div title="Escenarios exploratorios en grados. No equivalen a porcentajes ni acreditan accesibilidad normativa." id="slopeWrap" class="hidden"><label>Pendiente</label><select id="slope"><option value="">Seleccionar</option><option value="5">5°</option><option value="10">10°</option><option value="15">15°</option></select></div>
+<div><label class="person-field-label" for="length">Longitud del recorrido<br>captador (m)</label><input id="length" type="number" min="0.1" step="any"></div><div><label class="person-field-label" for="width">Ancho útil total<br>del acceso (m)</label><input id="width" type="number" min="0.1" step="any"></div>
+<div class="tiny" style="grid-column:1/-1">Ancho libre de obstáculos, incluidos ambos sentidos. En escalera, longitud sobre el recorrido inclinado.</div>
+<div><label class="person-field-label" for="people">Cantidad de personas<br>durante el período analizado</label><input id="people" type="number" min="1" step="1"><div class="tiny" style="margin-top:5px">Total de personas por el acceso, sumando ida y vuelta.</div></div><div><label class="person-field-label" for="walk">Condición<br>de marcha</label><select id="walk" onchange="walkChange()"><option value="">Seleccionar</option><option>Horizontal</option><option>Pendiente</option><option>Escalera</option></select></div><div title="Escenarios exploratorios en grados. No equivalen a porcentajes ni acreditan accesibilidad normativa." id="slopeWrap" class="hidden"><label>Pendiente</label><select id="slope"><option value="">Seleccionar</option><option value="5">5°</option><option value="10">10°</option><option value="15">15°</option></select></div>
 <div id="geometryWrap" class="hidden" style="grid-column:1/-1"><label for="geometry">¿La instalación conserva la geometría inicial de los escalones?</label><select id="geometry"><option value="">Seleccionar</option><option value="g">Sí, conserva alzada, huella y nivel</option><option value="r">No, modifica la geometría existente</option><option value="u">Todavía no está comprobado</option></select><div class="tiny">Se evalúa la instalación en reposo. Una modificación inicial determina NO ADMISIBLE; los 5 mm corresponden únicamente al recorrido durante la pisada.</div></div>
+<div id="coverageWrap" class="coverage hidden"><label id="coverageLabel">Distribución de la superficie captadora</label><p class="help">Seleccioná cómo ocupa el ancho del recorrido.</p><div class="coverage-grid" id="coverageButtons" role="group" aria-labelledby="coverageLabel"><button type="button" class="coverage-btn" data-coverage="full" aria-pressed="false" aria-label="100 % completo"><svg viewBox="0 0 64 42" aria-hidden="true"><rect x="18" y="3" width="28" height="36" fill="#e9edef"/><rect x="18" y="3" width="28" height="36" fill="#356879"/><path d="M18 3v36M46 3v36" stroke="#536975"/></svg><b>100 %</b><span>Completo</span></button><button type="button" class="coverage-btn" data-coverage="central" aria-pressed="false" aria-label="60 % central"><svg viewBox="0 0 64 42" aria-hidden="true"><rect x="18" y="3" width="28" height="36" fill="#e9edef"/><rect x="23.6" y="3" width="16.8" height="36" fill="#356879"/><path d="M18 3v36M46 3v36" stroke="#536975"/></svg><b>60 %</b><span>Central</span></button><button type="button" class="coverage-btn" data-coverage="sides" aria-pressed="false" aria-label="20 % a cada lado"><svg viewBox="0 0 64 42" aria-hidden="true"><rect x="18" y="3" width="28" height="36" fill="#e9edef"/><rect x="18" y="3" width="5.6000000000000005" height="36" fill="#356879"/><rect x="40.400000000000006" y="3" width="5.6000000000000005" height="36" fill="#356879"/><path d="M18 3v36M46 3v36" stroke="#536975"/></svg><b>20 %</b><span>A cada lado</span></button><button type="button" class="coverage-btn" data-coverage="half" aria-pressed="false" aria-label="50 % una mitad"><svg viewBox="0 0 64 42" aria-hidden="true"><rect x="5" y="3" width="22" height="36" fill="#e9edef"/><rect x="5" y="3" width="11" height="36" fill="#356879"/><rect x="37" y="3" width="22" height="36" fill="#e9edef"/><rect x="48" y="3" width="11" height="36" fill="#356879"/><path d="M5 3v36M27 3v36M37 3v36M59 3v36" stroke="#536975"/><text x="32" y="24" text-anchor="middle" font-size="9" fill="#637580">o</text></svg><b>50 %</b><span>Una mitad</span></button></div><div class="coverage-legend"><i></i>Superficie captadora</div></div>
 <div id="dispWrap" class="hidden" style="grid-column:1/-1"><label>Recorrido mecánico [mm]</label><input id="disp" type="number" min="0.1" step="0.1"><div id="dispHint" class="tiny"></div></div>
 </div></div>
 <div class="panel"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><path d="M3 12 12 4l9 8"/><path d="M6 10v9h12v-9M9 19v-5h6v5"/></svg></span><span>HÁBITAT</span></div><h3>Condiciones del lugar</h3><p class="help"><b>Integración</b><br>Articulación con el lugar existente.</p><select id="integration"><option value="">Seleccionar</option><option value="g">Alta</option><option value="y">Moderada</option><option value="r">Baja</option></select><hr class="sep"><p class="help"><b>Legibilidad</b><br>Comprensión habitual del lugar.</p><select id="legibility"><option value="">Seleccionar</option><option value="g">Conservada</option><option value="y">Alterada</option><option value="r">Comprometida</option></select></div>
 </div></section>
 
-<section class="card"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><path d="m13 2-7 12h6l-1 8 7-12h-6z"/></svg></span><span>SISTEMA DE CAPTACIÓN</span></div><h2>Tecnología de captación</h2><div class="techrow" id="techrow"><button class="techbtn" data-v="piezo"><b>Piezoeléctrico</b></button><button class="techbtn" data-v="tribo"><b>Triboeléctrico</b></button><button class="techbtn" data-v="electro"><b>Electromagnético</b></button><button class="techbtn" data-v="hybrid"><b>Híbrido</b></button><button class="techbtn" data-v="other"><b>Otro</b></button></div><p class="note">Las estimaciones tecnológicas son referencias orientativas, no predicciones verificadas para este emplazamiento.</p></section>
+<section class="card"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><path d="m13 2-7 12h6l-1 8 7-12h-6z"/></svg></span><span>SISTEMA DE CAPTACIÓN</span></div><h2>Tecnología de captación</h2><div class="techrow" id="techrow"><button class="techbtn" data-v="piezo"><b>Piezoeléctrico</b></button><button class="techbtn" data-v="tribo"><b>Triboeléctrico</b></button><button class="techbtn" data-v="electro"><b>Electromagnético</b></button><button class="techbtn" data-v="hybrid"><b>Híbrido</b></button><button class="techbtn" data-v="other"><b>Captador personalizado</b></button></div>
+<div id="flywheelWrap" class="custom-tech hidden"><div class="flywheel-buttons" role="group" aria-label="Volante de inercia electromagnético"><button type="button" class="flywheel-btn on" data-flywheel="off" aria-pressed="true">Sin volante</button><button type="button" class="flywheel-btn" data-flywheel="on" aria-pressed="false">Con volante</button></div><input type="hidden" id="flywheel" value="off"></div>
+<div id="customTech" class="custom-tech hidden">
+<h3>Datos técnicos del captador</h3>
+<div class="custom-grid">
+<div class="name"><label for="customName">Nombre del captador</label><input id="customName" maxlength="80" placeholder="Ej. Baldosa EM-01"></div>
+<div><label for="customMode">Dato disponible</label><select id="customMode"><option value="eta">Eficiencia de conversión</option><option value="event">Energía eléctrica por pisada</option></select></div>
+<div><label id="customValueLabel" for="customValue">Eficiencia de conversión [%]</label><input id="customValue" type="number" min="0" max="100" step="any" inputmode="decimal"></div>
+<div class="wide"><label for="customSource">Fuente y condiciones del dato (opcional)</label><input id="customSource" maxlength="240" placeholder="Ej. Ensayo propio con 5 mm de recorrido"></div>
+</div>
+<div class="custom-details">
+<details id="customHelper"><summary id="customHelperLabel">Calcular a partir de un ensayo</summary>
+<div class="custom-grid">
+<div><label id="customFirstLabel" for="customFirst"></label><input id="customFirst" type="number" min="0" step="any" inputmode="decimal"></div>
+<div><label id="customSecondLabel" for="customSecond"></label><input id="customSecond" type="number" min="0" step="any" inputmode="decimal"></div>
+<div><button type="button" id="customDerive" class="action secondary">Usar valor calculado</button></div>
+</div><p id="customFeedback" role="status"></p>
+</details>
+<details id="customReferences"><summary>Ver referencias de la biblioteca</summary><p>Piezoeléctrico <b>17,12 %</b> de conversión (Panthongsy et al., 2018) · Triboeléctrico <b>0,205 mJ/pisada</b> · Electromagnético <b>511 mJ/pisada</b> · Híbrido <b>613,2 mJ/pisada</b>.</p></details>
+</div>
+</div></section>
 
-<section class="card"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span><span>RESULTADO</span></div><h2>PMR SITUADO</h2><div id="error" class="error"></div><button class="action" onclick="calculate()">CALCULAR PMR SITUADO</button><div id="resultCard" class="resultCard"><div class="result"><div><canvas id="radar" width="700" height="700"></canvas><p class="tiny">Energía: posición proporcional de 0 a 100 % de la demanda; valores superiores se muestran en el extremo. Los otros ejes representan categorías FPH.</p></div><div>
-<div class="metric"><label>TRABAJO MECÁNICO TEÓRICO (PMR DE REFERENCIA)</label><div id="pmr" class="big">—</div><div class="tiny">Trabajo mecánico teórico del escenario, no recuperación experimental demostrada.</div></div>
-<div class="metric"><label>ENERGÍA ELÉCTRICA ESTIMADA</label><div id="elec" class="big">—</div><div class="tiny">Referencia tecnológica orientativa; no equivale al PMR mecánico.</div></div><div class="metric"><label>ENERGÍA / DEMANDA</label><div id="ratio" class="big">—</div><div class="tiny">de la demanda energética requerida por el usuario</div></div>
-<div class="metric"><label>SISTEMA DE CAPTACIÓN</label><div id="tout">—</div></div>
-<div class="metric"><label>FUNCIÓN</label><div id="fout">—</div><label style="margin-top:8px">PERSONA</label><div id="pout">—</div><label style="margin-top:8px">INTEGRACIÓN</label><div id="iout">—</div><label style="margin-top:8px">LEGIBILIDAD</label><div id="lout">—</div></div>
-<div class="metric"><label>CONDICIÓN DE INTERVENCIÓN</label><div id="condition" class="state">—</div></div>
-</div></div></div>
-<hr class="sep"><div class="k">COMPARAR · MÁXIMO 2</div><p class="note">Permite contrastar dos sistemas de captación bajo las mismas condiciones del caso.</p><div class="comparegrid"><select id="cmpA"><option>Piezoeléctrico</option><option>Triboeléctrico</option><option>Electromagnético</option><option>Híbrido</option><option>Otro</option></select><select id="cmpB"><option>Triboeléctrico</option><option>Piezoeléctrico</option><option>Electromagnético</option><option>Híbrido</option><option>Otro</option></select></div><button class="action secondary" style="margin-top:9px" onclick="drawCompare()">COMPARAR</button><canvas id="compareCanvas" width="700" height="700"></canvas>
+<section class="card"><div class="k iconTitle"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span><span>RESULTADO</span></div><h2>PMR SITUADO</h2><div id="error" class="error"></div><div class="result-actions"><button class="action" id="calculateButton" onclick="calculate()">CALCULAR PMR SITUADO</button><div id="exportRow" class="export-row" hidden><button type="button" class="action secondary" id="exportResults">Exportar resultados (CSV)</button><span id="exportStatus" role="status" class="tiny"></span></div><div id="improvementActivity" class="lookup-status" role="status" aria-live="polite"></div></div><div id="resultCard" class="resultCard"><div class="result result-layout">
+<div class="result-radar"><canvas id="radar" width="700" height="590" role="img" aria-label="Evaluación del escenario en energía, función, persona, integración y legibilidad"></canvas></div>
+<div class="result-energy"><div class="metric"><label>TRABAJO MECÁNICO TEÓRICO (PMR DEL ESCENARIO)</label><div id="pmr" class="big">—</div><div class="tiny">Energía mecánica previa a la conversión del captador.</div></div><div class="metric"><label>ENERGÍA ELÉCTRICA ESTIMADA</label><div id="elec" class="big">—</div><div class="tiny">Energía eléctrica calculada para el período.</div></div><div class="metric"><label>ENERGÍA / DEMANDA</label><div id="ratio" class="big">—</div><div class="tiny">de la demanda energética requerida por el usuario</div><div id="analysisDate" class="tiny" style="margin-top:8px"></div></div></div>
+<div class="result-fph"><div class="fp-item"><label>FUNCIÓN</label><div id="fout" class="status">—</div><div id="functionReasons" class="state-reasons" hidden></div></div><div class="fp-item"><label>PERSONA</label><div id="pout" class="status">—</div><div id="personReasons" class="state-reasons" hidden></div></div><div class="fp-item"><label>INTEGRACIÓN</label><div id="iout" class="status">—</div><div id="integrationReasons" class="state-reasons" hidden></div></div><div class="fp-item"><label>LEGIBILIDAD</label><div id="lout" class="status">—</div><div id="legibilityReasons" class="state-reasons" hidden></div></div><div class="intervention-summary"><label>CONDICIÓN DE INTERVENCIÓN</label><div id="condition" class="state">—</div><div id="conditionReasons" class="state-reasons" hidden></div></div></div>
+<div class="result-access"><div class="metric"><label>FLUJO PEATONAL APROVECHABLE SELECCIONADO</label><div id="flowOut">—</div></div><div class="metric"><label>SUPERFICIE CAPTADORA</label><div id="surfaceOut">—</div><div id="modulesOut" style="margin-top:5px">—</div><div class="tiny" style="margin-top:5px;line-height:1.4">Referencia de cálculo: módulos de 35×35 cm. Similar a baldosa triangular de 50 cm de lado.</div></div><div class="metric"><label>CIRCULACIÓN DEL ACCESO</label><div id="circulationOut">—</div><div id="circulationDetail" hidden class="tiny" style="margin-top:5px;line-height:1.5"></div><div id="circulationWarning" role="status" style="font-size:12px;font-weight:bold;margin-top:6px"></div></div><div class="metric"><label>SISTEMA DE CAPTACIÓN</label><div id="tout">—</div></div><div class="metric econ-final"><label>VALOR ECONÓMICO ORIENTATIVO</label><div id="usdOut">—</div><div id="economicSource" class="tiny" style="line-height:1.6"></div></div></div>
+</div></div>
+<div class="compare-panel"><h3>Comparar dos captadores</h3><p class="help">Mismas condiciones del recorrido. Elija dos alternativas para comparar energía y cobertura de demanda.</p><div class="compare-controls"><div><label for="cmpA">Alternativa A · línea continua</label><select id="cmpA"><option value="Piezoeléctrico">Piezoeléctrico</option><option value="Triboeléctrico">Triboeléctrico</option><option value="electro_off">Electromagnético · sin volante</option><option value="electro_on">Electromagnético · con volante</option><option value="Híbrido">Híbrido</option><option value="other">Captador personalizado</option></select></div><div><label for="cmpB">Alternativa B · línea discontinua</label><select id="cmpB"><option value="Piezoeléctrico">Piezoeléctrico</option><option value="Triboeléctrico" selected>Triboeléctrico</option><option value="electro_off">Electromagnético · sin volante</option><option value="electro_on">Electromagnético · con volante</option><option value="Híbrido">Híbrido</option><option value="other">Captador personalizado</option></select></div><button type="button" class="action secondary" id="compareButton" onclick="compareResults()">Comparar captadores</button></div><div id="compareError" class="compare-error" role="status"></div><div id="compareOutput" class="compare-output" hidden><canvas id="compareCanvas" width="700" height="700" role="img" aria-label="Comparación de dos alternativas de captación"></canvas><div><div class="compare-option"><strong id="compareNameA"></strong><div id="compareEnergyA" class="compare-energy"></div><div id="compareRatioA" class="compare-note"></div></div><div class="compare-option"><strong id="compareNameB"></strong><div id="compareEnergyB" class="compare-energy"></div><div id="compareRatioB" class="compare-note"></div></div><p class="compare-note">Los criterios FPH son comunes a ambas alternativas: se evalúa el mismo escenario.</p><div id="compareCondition" class="compare-note"></div></div></div></div>
 </section>
 
 <script>
-/* Motor v16 / tesis V48. 2026-10-28. Techos H/P/E: 10/7.5/5 mm; cortes verde: 5/4/2 mm. Referencia preferente <=2 mm. */
-const R='#b94b4b',Y='#c39a25',G='#438b58',N='#999'; let F='',ALT='';
+/* Motor v18 / fundamentos mecánicos de la tesis V50. 2026-11-16. Techos H/P/E: 10/7.5/5 mm; cortes verde: 5/4/2 mm. Referencia preferente <=2 mm. */
+const R='#b94b4b',Y='#c39a25',G='#438b58',N='#999'; let F='',ALT='',COVERAGE='';
 const $=id=>document.getElementById(id);
 const project=$('project'),interaction=$('interaction'),period=$('period'),otherPeriod=$('otherPeriod'),days=$('days'),demand=$('demand');
-const people=$('people'),lengthField=$('length'),walk=$('walk'),slopeWrap=$('slopeWrap'),slope=$('slope'),dispWrap=$('dispWrap'),disp=$('disp'),dispHint=$('dispHint');
+const people=$('people'),lengthField=$('length'),widthField=$('width'),walk=$('walk'),slopeWrap=$('slopeWrap'),slope=$('slope'),dispWrap=$('dispWrap'),disp=$('disp'),dispHint=$('dispHint');
 const geometry=$('geometry'),geometryWrap=$('geometryWrap');
+const coverageWrap=$('coverageWrap'),coverageButtons=$('coverageButtons'),flowOut=$('flowOut');
+// La disposición a transitar es un filtro interno, nunca una elección del usuario.
+const coverageLibrary={full:{label:'Completo',coverage:1,r:1,a:1},central:{label:'Central',coverage:.6,r:.73,a:.79},sides:{label:'A cada lado',coverage:.4,r:.27,a:.79},half:{label:'Una mitad',coverage:.5,r:.5,a:.79}};
+function flowFactors(){if(walk.value!=='Horizontal')return {label:'Recorrido de referencia',coverage:1,r:1,a:1,factor:1};const q=coverageLibrary[COVERAGE];if(!q)return null;const a=q.a;return {...q,a,factor:q.r*a}}
+function choiceState(){return walk.value==='Horizontal'&&COVERAGE==='full'?'y':'g'}
+document.querySelectorAll('.coverage-btn').forEach(b=>b.onclick=()=>{COVERAGE=b.dataset.coverage;document.querySelectorAll('.coverage-btn').forEach(x=>{const selected=x===b;x.classList.toggle('on',selected);x.setAttribute('aria-pressed',String(selected))})});
 const integration=$('integration'),legibility=$('legibility'),errorBox=$('error'),resultCard=$('resultCard'),pmrOut=$('pmr'),elecOut=$('elec'),ratioOut=$('ratio'),tout=$('tout'),fout=$('fout'),pout=$('pout'),iout=$('iout'),lout=$('lout'),conditionOut=$('condition');
 const cmpA=$('cmpA'),cmpB=$('cmpB'),compareCanvas=$('compareCanvas');
-const techNames={piezo:'Piezoeléctrico',tribo:'Triboeléctrico',electro:'Electromagnético',hybrid:'Híbrido',other:'Otro'};
+const flywheel=$('flywheel'),flywheelWrap=$('flywheelWrap'),usdOut=$('usdOut');
+const techNames={piezo:'Piezoeléctrico',tribo:'Triboeléctrico',electro:'Electromagnético',hybrid:'Híbrido',other:'Captador personalizado'};
 document.querySelectorAll('.fcard').forEach(b=>b.onclick=()=>{F=b.dataset.v;document.querySelectorAll('.fcard').forEach(x=>x.classList.remove('on'));b.classList.add('on')});
-document.querySelectorAll('.techbtn').forEach(b=>b.onclick=()=>{ALT=b.dataset.v;document.querySelectorAll('.techbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on')});
+document.querySelectorAll('.techbtn').forEach(b=>b.onclick=()=>{ALT=b.dataset.v;document.querySelectorAll('.techbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on');updateCustomVisibility();updateFlywheelVisibility()});
+/* Actualización en memoria: OpenAlex permite descubrir referencias, pero los metadatos
+   por sí solos NO certifican rendimiento cuantitativo ni compatibilidad. Solo se
+   incorporan entradas documentadas mediante un registro estructurado verificado,
+   provisto en la respuesta de una fuente auditada; el HTML nunca se reescribe.
+   El sitio puede definir window.PMR_VERIFIED_FEED_URL antes de iniciar el motor.
+   Sin ese registro, la consulta bibliográfica conserva la biblioteca publicada. */
+const scienceQueries=[
+ 'pedestrian piezoelectric floor energy harvesting conversion efficiency',
+ 'pedestrian triboelectric floor energy harvesting energy per step',
+ 'pedestrian electromagnetic floor energy harvesting conversion efficiency',
+ 'pedestrian hybrid floor energy harvesting energy per step'
+];
+const FAMILY_KEYS=['piezo','tribo','electro','hybrid'];
+const PAN_POSITION_FACTOR=0.844;
+const PAN_POSITION_PERIPHERAL=0.792;
+const LIU_CAPTURE={off:0.458,on:0.75};
+const LIU_ELECTRIC_CONVERSION=0.50;
+const LIU_DOI='10.1016/j.apenergy.2017.12.123';
+let activeTechReferences={};
+let latestScience={status:'sin_consulta',message:'',checkedAt:null,counts:[],updated:[]};
+let priceData={tariffARS:163.597,tariffDate:'2026-11-01',tariffSource:'ENRE · Edenor R1 sin subsidio · cargo variable 0–150 kWh',tariffURL:'https://www.enre.gov.ar/web/tarifasd.nsf/todoscuadros/0083D74210C6DE0303258EAD004257AD',tariffLive:false,rateARS:1547.0336,rateDate:'2026-11-13',rateSource:'BCRA · Comunicación A 3500 · referencia publicada',rateURL:'https://api.bcra.gob.ar/estadisticascambiarias/v1.0/Cotizaciones/USD',rateLive:false,checkedAt:null};
+function timeoutFetch(url,ms=6800){const ctl=new AbortController(),stop=setTimeout(()=>ctl.abort(),ms);return fetch(url,{signal:ctl.signal,cache:'no-store',mode:'cors'}).finally(()=>clearTimeout(stop))}
+function candidateValid(c,base){
+ if(!c||!base||!FAMILY_KEYS.includes(c.family)||c.mode!==base.mode)return false;
+ if(!/^10\.\d{4,9}\/\S+$/i.test(String(c.doi||'')))return false;
+ if(!/^https:\/\/doi\.org\/10\.\d{4,9}\/\S+$/i.test(String(c.url||'')))return false;
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(String(c.published||''))||new Date(c.published).getTime()>Date.now())return false;
+ if(!c.sourceTitle||!c.methodology||!c.evidenceText||String(c.evidenceText).length<35)return false;
+ if(c.technology!==c.family||c.interaction!=='pedestrian'||c.walk!=='Horizontal')return false;
+ if(c.inputStage!=='PMR_before_capture'&&c.mode==='eta')return false;
+ if(c.mode==='event'&&c.outputStage!=='electric_per_step')return false;
+ if(c.mode==='eta'&&c.unit!=='fraction')return false;
+ if(c.mode==='event'&&c.unit!=='J/step')return false;
+ if(!(Number.isFinite(c.strokeMm)&&c.strokeMm>0&&c.strokeMm<=10&&Math.abs(c.strokeMm-(+disp.value))<=.25))return false;
+ if(c.positionAlreadyIncluded!==true&&c.positionAlreadyIncluded!==false)return false;
+ const val=Number(c.value);
+ if(!Number.isFinite(val)||val<0||(c.mode==='eta'&&val>1))return false;
+ if(c.family==='electro')return false; // la comparación Liu con/sin volante tiene base específica; no reemplazarla por metadatos genéricos
+ const old=c.mode==='eta'?base.eta:base.Jevent;
+ if(!(val>old))return false;
+ return true;
+}
+async function verifyCandidate(c){
+ const response=await timeoutFetch('https://api.crossref.org/works/'+encodeURIComponent(c.doi),4500);
+ if(!response.ok)return false;
+ const data=await response.json(),info=data.message;
+ const canonical=String(info?.DOI||'').toLowerCase();
+ const registered=String(c.doi).toLowerCase();
+ const publishedYear=Number(String(c.published).slice(0,4));
+ const metadataYear=info?.published?.['date-parts']?.[0]?.[0]||info?.issued?.['date-parts']?.[0]?.[0];
+ const titles=(info?.title||[]).join(' ').toLowerCase();
+ const familyTerms={piezo:'piezo',tribo:'tribo',hybrid:'hybrid',electro:'electromagnetic'};
+ return canonical===registered&&metadataYear===publishedYear&&titles.includes(familyTerms[c.family]);
+}
+async function reviewReferences(){
+ const base=techLibrary;
+ const results=await Promise.allSettled(scienceQueries.map(async(q)=>{
+   const u='https://api.openalex.org/works?search='+encodeURIComponent(q)+'&filter=from_publication_date:2023-01-01&per-page=3';
+   const r=await timeoutFetch(u,6800);if(!r.ok)throw Error('HTTP '+r.status);
+   const data=await r.json();if(!Array.isArray(data.results))throw Error('Formato no comprobable');
+   return {count:data.results.length,works:data.results.filter(x=>x.doi&&x.publication_year)};
+ }));
+ const ok=results.filter(x=>x.status==='fulfilled');
+ const vetted=[],feedURL=window.PMR_VERIFIED_FEED_URL;
+ let feedFailed=false;
+ if(typeof feedURL==='string'&&/^https:\/\//i.test(feedURL)){
+  try{const r=await timeoutFetch(feedURL,6800);if(!r.ok)throw Error('feed HTTP');
+   const j=await r.json();if(!Array.isArray(j.candidates))throw Error('feed sin candidatos');
+   for(const candidate of j.candidates){
+    if(candidateValid(candidate,base[candidate?.family])&&await verifyCandidate(candidate))vetted.push(candidate);
+   }
+  }catch(e){feedFailed=true;}
+ }
+ const updates=[];activeTechReferences={};
+ for(const c of vetted){
+  const existing=activeTechReferences[c.family]||base[c.family];
+  const old=existing.mode==='eta'?existing.eta:existing.Jevent;
+  if(c.value<=old)continue;
+  const r={...existing,eta:c.mode==='eta'?c.value:undefined,Jevent:c.mode==='event'?c.value:undefined,
+   positionAlreadyIncluded:c.positionAlreadyIncluded,ref:c.sourceTitle+' · '+c.doi+' · '+c.published,
+   sourceURL:c.url,published:c.published,updated:true,conditions:{strokeMm:c.strokeMm,walk:c.walk}};
+  activeTechReferences[c.family]=r;
+  updates.push({family:c.family,label:techNames[c.family],reference:r.ref,value:c.value,mode:c.mode,url:c.url});
+ }
+ const status=updates.length?'actualizado':feedFailed?'consulta_parcial':ok.length===4?'sin_mejoras_verificadas':ok.length?'consulta_parcial':'consulta_fallida';
+ const message=updates.length?'Se actualizaron parámetros de rendimiento con referencias verificadas: '+updates.map(x=>x.label+' ('+x.reference+')').join('; ')+'.':status==='sin_mejoras_verificadas'?'Se mantienen los parámetros de rendimiento existentes. No se encontraron mejoras comparables y verificables en los datos consultables.':status==='consulta_parcial'?'Consulta científica parcial. Se mantienen los parámetros de rendimiento existentes.':'No fue posible completar la consulta científica. Se mantienen los parámetros de rendimiento existentes.';
+ latestScience={checkedAt:new Date().toISOString(),counts:results.map(x=>x.status==='fulfilled'?x.value.count:null),updated:updates,status,message};
+ return latestScience;
+}
+async function reviewElectricityPrice(){
+  // Referencia ENRE publicada y contrastada al editar esta versión: 1/11/2026.
+  // Se intenta revalidar en vivo; nunca se finge actualización ante fallo CORS.
+  const [tar,fx]=await Promise.allSettled([
+    (async()=>{const r=await timeoutFetch(priceData.tariffURL,5800);if(!r.ok)throw Error('Tarifa no accesible');const html=await r.text();const plain=new DOMParser().parseFromString(html,'text/html').body.textContent.replace(/\s+/g,' ');const period=plain.match(/Per[ií]odo\s*(\d{1,2})\/(\d{2})/i);const match=plain.match(/Cargo Variable 0-150\s*\$\/kWh\s*([\d.,]+)/i);if(!match||!period)throw Error('Formato ENRE no reconocible');const val=parseFloat(match[1].replace(/,/g,''));if(!Number.isFinite(val)||val<=0||val>100000)throw Error('Tarifa no verificable');return {val,date:'20'+period[2]+'-'+period[1].padStart(2,'0')+'-01'};})(),
+    (async()=>{const today=new Date(),since=new Date(today);since.setDate(today.getDate()-21);const toDate=x=>x.toISOString().slice(0,10);const query=priceData.rateURL+'?fechaDesde='+toDate(since)+'&fechaHasta='+toDate(today)+'&limit=40';const r=await timeoutFetch(query,6500);if(!r.ok)throw Error('BCRA no accesible');const j=await r.json();const sets=Array.isArray(j.results)?j.results:(j.results?.detalle?[j.results]:[]);sets.sort((a,b)=>String(b.fecha).localeCompare(String(a.fecha)));for(const item of sets){const det=Array.isArray(item.detalle)?item.detalle:[];const rec=det.find(x=>x.codigoMoneda==='USD'&&Number(x.tipoCotizacion)>0);if(rec)return {rate:Number(rec.tipoCotizacion),date:item.fecha};}throw Error('BCRA sin cotización USD verificable');})()
+  ]);
+  if(tar.status==='fulfilled')Object.assign(priceData,{tariffARS:tar.value.val,tariffDate:tar.value.date,tariffLive:true});
+  if(fx.status==='fulfilled')Object.assign(priceData,{rateARS:fx.value.rate,rateDate:fx.value.date,rateLive:true,rateSource:'BCRA · API Estadísticas Cambiarias · USD'});
+  else priceData.rateLive=false; // Preserva referencia BCRA fechada para el cálculo, sin atribuirle actualidad.
+  priceData.checkedAt=new Date().toISOString();return priceData;
+}
+function moneyText(){
+ const src=$('economicSource');const T=lastResult?.T;
+ const date=new Date().toLocaleDateString('es-AR');
+ if(!T){usdOut.textContent='—';src.textContent='';return;}
+ const pesos=T.Wh/1000*priceData.tariffARS;
+ const ars=pesos.toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2});
+ const priceNote=priceData.tariffLive?'Tarifa consultada':'Tarifa de referencia publicada';
+ if(priceData.rateARS){
+   const usd=pesos/priceData.rateARS;
+   usdOut.textContent=(Math.trunc((usd+Number.EPSILON)*10000)/10000).toFixed(4)+' USD';
+   src.textContent=ars+' ARS · '+priceNote+': '+priceData.tariffARS+' ARS/kWh ('+priceData.tariffDate+') · '+(priceData.rateLive?'BCRA consultado':'BCRA A3500 · referencia de respaldo')+': '+priceData.rateARS+' ARS/USD ('+priceData.rateDate+') · cálculo '+date+'. Sin cargos fijos ni impuestos.';
+ }else{
+   usdOut.textContent='Conversión USD no disponible';
+   src.textContent=ars+' ARS estimados · '+priceNote+': '+priceData.tariffARS+' ARS/kWh ('+priceData.tariffDate+') · no se obtuvo cotización BCRA; no se inventa un tipo de cambio · cálculo '+date+'.';
+ }
+ src.innerHTML=src.textContent+' · <a target="_blank" rel="noopener" href="'+priceData.tariffURL+'">Tarifa ENRE</a> · <a target="_blank" rel="noopener" href="https://www.bcra.gob.ar/tipo-cambio-referencia-comunicacion-a-3500-tcnpm/">BCRA</a>';
+}
+let activeLookup=null;
+async function calculate(){
+ if(activeLookup)return activeLookup;
+ if(!validate()||(ALT==='other'&&!validateCustom()))return;
+ const status=$('improvementActivity'),btn=$('calculateButton');
+ status.innerHTML='<span class="status-loading"><span class="spinner" aria-hidden="true"></span>Consultando referencias científicas, tarifa y BCRA…</span>';btn.disabled=true;
+ activeLookup=Promise.allSettled([reviewReferences(),reviewElectricityPrice()]).then(()=>{
+   calculateCore();moneyText();
+   const messages=latestScience.status==='actualizado'
+     ? ['Se actualizaron los parámetros de rendimiento verificados.',...latestScience.updated.map(x=>x.label+': '+x.reference)]
+     :latestScience.status==='sin_mejoras_verificadas'
+       ? ['Se mantienen los parámetros de rendimiento existentes.','No se encontraron mejoras comparables y verificables en los datos.']
+       :latestScience.status==='consulta_parcial'
+         ? ['Se mantienen los parámetros de rendimiento existentes.','La consulta científica fue parcial; no se verificaron mejoras comparables.']
+         : ['Se mantienen los parámetros de rendimiento existentes.','No fue posible completar la consulta científica.'];
+   messages.push(priceData.rateLive?'Cotización BCRA actualizada.':priceData.rateARS?'Se utiliza cotización BCRA de respaldo ('+priceData.rateDate+').':'Cotización BCRA no disponible.');
+   status.replaceChildren(...messages.map(message=>{const line=document.createElement('span');line.className='status-line';line.textContent=message;return line;}));
+   if(hasCompared)drawCompare();return lastResult;
+ }).finally(()=>{btn.disabled=false;activeLookup=null});
+ return activeLookup;
+}
+
+function updateFlywheelVisibility(){flywheelWrap.classList.toggle('hidden',ALT!=='electro'&&![cmpA,cmpB].some(x=>x.value==='Electromagnético'))}
+document.querySelectorAll('.flywheel-btn').forEach(b=>b.addEventListener('click',()=>{flywheel.value=b.dataset.flywheel;document.querySelectorAll('.flywheel-btn').forEach(x=>{const on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',String(on));});refreshResults();}));
 function periodChange(){otherPeriod.classList.toggle('hidden',period.value!=='other')}
-function walkChange(){let w=walk.value;geometryWrap.classList.toggle('hidden',w!=='Escalera');slopeWrap.classList.toggle('hidden',w!=='Pendiente');dispWrap.classList.toggle('hidden',!w);if(!w){disp.value='';return}disp.min=.1;disp.step=.1;disp.removeAttribute('max');let cut=w==='Horizontal'?5:w==='Pendiente'?4:2,cap=w==='Horizontal'?10:w==='Pendiente'?7.5:5;dispHint.textContent='Hasta 2 mm: referencia preferente · admisible hasta '+cut+' mm · comprometida hasta '+String(cap).replace('.',',')+' mm · por encima: no admisible. Sujeto a las restantes condiciones FPH.';}
-function fstate(){if(!F)return null;let s=F==='Circulación'?'g':F==='Especial'?'y':'r';if(walk.value==='Escalera'){if(geometry.value==='r')return'r';if(geometry.value==='u'&&s==='g')return'y'}return s}
-function pstate(){if(!walk.value||disp.value==='')return null;let d=+disp.value;if(walk.value==='Horizontal')return d<=5?'g':d<=10?'y':'r';if(walk.value==='Pendiente')return d<=4?'g':d<=7.5?'y':'r';if(walk.value==='Escalera')return d<=2?'g':d<=5?'y':'r'}
+function walkChange(){let w=walk.value;coverageWrap.classList.toggle('hidden',w!=='Horizontal');geometryWrap.classList.toggle('hidden',w!=='Escalera');slopeWrap.classList.toggle('hidden',w!=='Pendiente');dispWrap.classList.toggle('hidden',!w);if(!w){disp.value='';return}disp.min=.1;disp.step=.1;disp.removeAttribute('max');let cut=w==='Horizontal'?5:w==='Pendiente'?4:2,cap=w==='Horizontal'?10:w==='Pendiente'?7.5:5;dispHint.textContent='Preferente h/2 mm · Admisible h/'+String(cut).replace('.',',')+' mm ·\nComprometida h/'+String(cap).replace('.',',')+' mm · No admisible >'+String(cap).replace('.',',')+' mm';}
+function baseFunctionState(){if(!F)return null;let s=F==='Circulación'?'g':F==='Especial'?'y':'r';if(walk.value==='Escalera'){if(geometry.value==='r')return'r';if(geometry.value==='u'&&s==='g')return'y'}return s}
+
+// Circulation is an independent admissibility check. It never scales mechanicalPMR/techResult.
+const CIRCULATION_SOURCE='Rouphail et al. (1998), FHWA-RD-98-107, tablas 4 y 9 y sección 2.2';
+function circulationThresholds(){
+ if(walk.value==='Escalera')return {comfort:1560,capacity:2940,derived:false};
+ if(walk.value==='Pendiente'&&Math.tan(+slope.value*Math.PI/180)>.10)
+  return {comfort:1980*(1.22-.10)/1.22,capacity:4500*(.75-.10)/.75,derived:true};
+ return {comfort:1980,capacity:4500,derived:false};
+}
+function circulationStateFor(q,t){
+ const le=(x,y)=>x<=y+Math.max(1,Math.abs(y))*1e-12;
+ return le(q,t.comfort)?'g':le(q,t.capacity)?'y':'r';
+}
+function circulationData(){
+ const width=+widthField.value,n=+people.value;
+ if(!(width>0)||!(n>0)||!Number.isFinite(width)||!Number.isFinite(n))return null;
+ const hours=period.value==='hour'?1:period.value==='day'?24:24*(+days.value);
+ if(!(hours>0)||!Number.isFinite(hours))return null;
+ const hourly=n/hours,specific=hourly/width,t=circulationThresholds();
+ if(!Number.isFinite(specific))return null;
+ return {...t,width,hours,hourly,specific,comfortTotal:t.comfort*width,capacityTotal:t.capacity*width,
+  state:circulationStateFor(specific,t),basis:period.value==='hour'?'Hora ingresada':'Promedio horario (no hora pico)',source:CIRCULATION_SOURCE};
+}
+function fstate(){const base=baseFunctionState(),cs=circulationData()?.state;
+ if(!base)return null;return base==='r'||cs==='r'?'r':base==='y'||cs==='y'?'y':'g';}
+function surfaceData(){const flow=flowFactors();if(!flow)return null;
+ const area=+lengthField.value*(+widthField.value)*flow.coverage;
+ if(!Number.isFinite(area)||area<=0)return null;
+ const raw=area/.1225,nearest=Math.round(raw);
+ const modules=Math.abs(raw-nearest)<=Math.max(1,raw)*Number.EPSILON*8?nearest:Math.ceil(raw);
+ return {area,modules,fraction:flow.coverage,moduleArea:.1225};}
+function formatNumber(n,max=2){return n.toLocaleString('es-AR',{maximumFractionDigits:max});}
+function renderAccessResults(){
+ const cd=circulationData(),sd=surfaceData();
+ $('surfaceOut').textContent=formatNumber(sd.area,4)+' m²';
+ $('modulesOut').textContent=formatNumber(sd.modules,0)+' módulos equivalentes';
+ $('circulationOut').textContent=formatNumber(cd.hourly)+' personas/h · '+formatNumber(cd.specific)+' personas/h por metro';
+ $('circulationDetail').textContent=cd.basis+' · ambos sentidos · ancho útil '+formatNumber(cd.width)+' m. Confort hasta '+formatNumber(cd.comfortTotal)+' personas/h; capacidad hasta '+formatNumber(cd.capacityTotal)+' personas/h. '+(cd.derived?'Umbrales derivados · ':'')+'FHWA-RD-98-107.';
+ const warning=$('circulationWarning');warning.textContent=cd.state==='r'?'INADMISIBLE POR CIRCULACIÓN · exceso de flujo peatonal':cd.state==='y'?'CIRCULACIÓN COMPROMETIDA · restricciones de confort':'';
+ warning.style.color=cd.state==='r'?R:Y;
+ return {circulation:cd,surface:sd};
+}
+
+function displacementState(){if(!walk.value||disp.value==='')return null;let d=+disp.value;if(walk.value==='Horizontal')return d<=5?'g':d<=10?'y':'r';if(walk.value==='Pendiente')return d<=4?'g':d<=7.5?'y':'r';if(walk.value==='Escalera')return d<=2?'g':d<=5?'y':'r'}
+function pstate(){const st=displacementState();if(!st)return null;return st==='r'?'r':st==='y'||choiceState()==='y'?'y':'g'}
+// El radio expresa recorrido mecánico; el color incluye la elección de recorrido.
+function personRadius(){if(!walk.value||disp.value==='')return .6;const d=Math.max(0,+disp.value),cut=walk.value==='Horizontal'?5:walk.value==='Pendiente'?4:2,cap=walk.value==='Horizontal'?10:walk.value==='Pendiente'?7.5:5;if(d<=cut)return 1-.4*d/cut;if(d<=cap)return .6-.4*(d-cut)/(cap-cut);return .2*cap/d}
 function word(s){return s==='g'?'ADMISIBLE':s==='y'?'COMPROMETIDA':s==='r'?'NO ADMISIBLE':'—'}
 function clearMissing(){document.querySelectorAll('.missing').forEach(x=>x.classList.remove('missing'));errorBox.style.display='none'}
 function need(el,label,arr,cond=true){if(cond && (el.value===''||(+el.value<=0&&el.type==='number'))){arr.push(label);el.classList.add('missing')}}
-function validate(){clearMissing();let m=[];if(interaction.value!=='Peatonal'){m.push('Sólo está implementada la interacción peatonal');interaction.classList.add('missing')}need(demand,'Demanda energética requerida',m);need(people,'Cantidad de personas',m);need(lengthField,'Longitud del recorrido',m);if(!F){m.push('Función');document.getElementById('fbuttons').classList.add('missing')}if(!walk.value){m.push('Condición de marcha');walk.classList.add('missing')}if(walk.value==='Pendiente')need(slope,'Pendiente',m);if(walk.value==='Escalera')need(geometry,'Conservación de la geometría inicial de los escalones',m);if(walk.value){need(disp,'Recorrido mecánico',m);if(disp.value && (+disp.value<+disp.min || (disp.max!=='' && +disp.value>+disp.max))){m.push('Recorrido mecánico de al menos 0,1 mm');disp.classList.add('missing')}}if(!integration.value){m.push('Integración');integration.classList.add('missing')}if(!legibility.value){m.push('Legibilidad');legibility.classList.add('missing')}if(!ALT){m.push('Sistema de captación');document.getElementById('techrow').classList.add('missing')}if(people.value!==''&&(!Number.isSafeInteger(+people.value)||+people.value<1)){m.push('Cantidad entera positiva de personas');people.classList.add('missing')}if(period.value==='other'){need(days,'Duración del período',m);if(days.value!==''&&(!Number.isSafeInteger(+days.value)||+days.value<2)){m.push('Duración entera de al menos 2 días');days.classList.add('missing')}}for(const [el,label] of [[demand,'Demanda'],[people,'Personas'],[lengthField,'Recorrido'],[disp,'Desplazamiento']]){if(el.value!==''&&!Number.isFinite(+el.value)){m.push(label+' finito');el.classList.add('missing')}}if(m.length){errorBox.innerHTML='<b>No se puede calcular todavía.</b><br>Falta completar: '+m.join(' · ');errorBox.style.display='block';return false}return true}
+function validate(forComparison=false){clearMissing();let m=[];need(period,'Período de análisis',m);if(interaction.value!=='Peatonal'){m.push('Sólo está implementada la interacción peatonal');interaction.classList.add('missing')}need(demand,'Demanda energética requerida',m);need(people,'Cantidad de personas',m);need(lengthField,'Longitud del recorrido',m);need(widthField,'Ancho útil total del acceso',m);if(!F){m.push('Función');document.getElementById('fbuttons').classList.add('missing')}if(!walk.value){m.push('Condición de marcha');walk.classList.add('missing')}if(walk.value==='Horizontal'&&!COVERAGE){m.push('Distribución de la superficie captadora');coverageButtons.classList.add('missing')}if(walk.value==='Pendiente')need(slope,'Pendiente',m);if(walk.value==='Escalera')need(geometry,'Conservación de la geometría inicial de los escalones',m);if(walk.value){need(disp,'Recorrido mecánico',m);if(disp.value && (+disp.value<+disp.min || (disp.max!=='' && +disp.value>+disp.max))){m.push('Recorrido mecánico de al menos 0,1 mm');disp.classList.add('missing')}}if(!integration.value){m.push('Integración');integration.classList.add('missing')}if(!legibility.value){m.push('Legibilidad');legibility.classList.add('missing')}if(!ALT&&!forComparison){m.push('Sistema de captación');document.getElementById('techrow').classList.add('missing')}if(people.value!==''&&(!Number.isSafeInteger(+people.value)||+people.value<1)){m.push('Cantidad entera positiva de personas');people.classList.add('missing')}if(period.value==='other'){need(days,'Duración del período',m);if(days.value!==''&&(!Number.isSafeInteger(+days.value)||+days.value<2)){m.push('Duración entera de al menos 2 días');days.classList.add('missing')}}for(const [el,label] of [[demand,'Demanda'],[people,'Personas'],[lengthField,'Recorrido'],[widthField,'Ancho'],[disp,'Desplazamiento']]){if(el.value!==''&&!Number.isFinite(+el.value)){m.push(label+' finito');el.classList.add('missing')}}if(!m.length&&(!surfaceData()||!Number.isSafeInteger(surfaceData().modules)||!circulationData()||!Number.isFinite(circulationData().capacityTotal))){m.push('Dimensiones y flujo dentro de un rango numérico representable')}if(m.length){errorBox.innerHTML='<b>No se puede calcular todavía.</b><br>Falta completar: '+m.join(' · ');errorBox.style.display='block';return false}return true}
 function representativePeople(){let n=+people.value;if(period.value==='other')return n/+days.value;return n}
 function representativeDemand(){let d=+demand.value;if(period.value==='other')return d/+days.value;return d}
-/* Motor PMR v0.16. El potencial mecánico se calcula primero. La tecnología se aplica después mediante una Biblioteca Tecnológica de Referencia (corte bibliográfico 2026-09).
+/* Motor PMR v0.18. El potencial mecánico se calcula primero con el perfil de fuerza media temporal variable disponible; se indica su número de apoyos y se admite importación de 98 apoyos. La tecnología se aplica después mediante una Biblioteca Tecnológica de Referencia (biblioteca de referencias con fecha de revisión 2026-11-16; valores no universales).
    Los parámetros NO son eficiencias universales: son referencias operativas versionadas y actualizables.
    Piezo: eficiencia experimental 17,12% (Panthongsy et al., 2018).
    Tribo: 0,205 mJ/evento, valor central de 0,14 y 0,27 mJ/evento medidos en dos configuraciones del mismo TEHFT a 5 mm (Materials 2022, 15, 8853).
@@ -70,21 +296,289 @@ function representativeDemand(){let d=+demand.value;if(period.value==='other')re
    Híbrido: referencia operacional provisional = 1,20 x referencia electromagnética. El factor 1,20 procede del piso TENG+EMG de Islam et al. (2020), que reporta 20% más potencia que un piso comercial. No se interpreta como eficiencia intrínseca.
    En referencias expresadas como energía/evento, el resultado se limita por el potencial mecánico disponible del caso. */
 const techLibrary={piezo:{mode:'eta',eta:.1712,ref:'Panthongsy et al. 2018'},tribo:{mode:'event',Jevent:.000205,ref:'TEHFT 2022'},electro:{mode:'event',Jevent:.511,ref:'mediana 199/511/702 mJ'},hybrid:{mode:'event',Jevent:.511*1.20,ref:'provisional Islam et al. 2020'}};
-function mechanicalPMR(){let n=representativePeople(),L=+lengthField.value,d=+disp.value/1000;let mass=75,g=9.80665;/* Referencias biomecánicas internas. Horizontal y pendiente: GRF vertical de referencia 1,2 BW. No se aplica cos(ángulo): la pendiente modifica la biomecánica, pero la componente vertical útil para una superficie desplazable no admite esa reducción geométrica simplificada. Escalera: condición bidireccional de referencia 50/50; GRF 1,575 BW = media de los puntos medios bibliográficos de ascenso (1,2–1,7 BW) y descenso (1,4–2,0 BW). Geometría 16 x 30 cm: L debe medirse sobre la trayectoria inclinada; paso equivalente sqrt(0,30²+0,16²). Fundamento y trazabilidad: tesis/anexo. */let step=0.75,grf=1.2;if(walk.value==='Escalera'){step=Math.sqrt(.30*.30+.16*.16);grf=1.575}let stepsPerPerson=L/step;/* Pasos equivalentes esperados; no conteo entero de pisadas. */let force=mass*g*grf;/* Formulación: formulación integral. Modelo de referencia lineal F(s)=Fmax·s/d; por tanto W=∫0^d F(s)ds=0,5·Fmax·d. La ecuación general es la integral fuerza-desplazamiento; el perfil lineal es una hipótesis de prefactibilidad explícita y reemplazable cuando exista curva experimental específica. */let workPerEvent=0.5*force*d;let J=n*stepsPerPerson*workPerEvent;return {J,Wh:J/3600,n,stepsPerPerson,force,step,mass,grf,slopeFactor:1,workPerEvent,forceModel:'integral-linear'}}
-function techResult(key,M){if(key==='other')return null;let r=techLibrary[key];if(!r)return null;let J;if(r.mode==='eta'){J=M.J*r.eta}else if(r.mode==='event'){let events=M.n*M.stepsPerPerson;J=Math.min(M.J,events*r.Jevent)}else return null;if(!Number.isFinite(J)||J<0)return null;return {J,Wh:J/3600,ref:r.ref}}
+/* Reconstrucción desde los SEIS PUNTOS AGREGADOS del PROMEDIO DE 98 APOYOS
+   de 12 participantes, y NO desde seis apoyos individuales. Los registros crudos
+   no están incorporados: no puede inferirse de seis medias la distribución individual.
+   Puntos conservados: t=0,10,20,30,40,50 ms. Velocidad de actuador constante,
+   tiempo -> desplazamiento x=d*t/50. Interpolación lineal a tramos y aplicación
+   de la primitiva analítica EN CADA TRAMO, sin perfil triangular global, sin
+   fuerza constante y sin aproximación numérica trapezoidal.
+*/
+const PROFILE_SAMPLE_MS=[0,10,20,30,40,50];
+const AGGREGATED_GAIT98_MEAN=[0,10.228877551,68.165204082,230.148061224,339.265816327,446.391224490];
+const AGGREGATED_GAIT98_TARGET_J_5MM=.871;
+let measuredProfile={times:PROFILE_SAMPLE_MS,forces:AGGREGATED_GAIT98_MEAN,supports:98,participants:12,
+ source:'Reconstrucción de seis puntos agregados del promedio previo de 98 apoyos / 12 participantes (sin series crudas); marcha en plano, ventana 50 ms',verified98:false,aggregated98:true};
+function profileStatus(){const el=$('profileStatus');if(!el)return;
+ el.textContent=(measuredProfile.verified98?'SERIES IMPORTADAS · 98 APOYOS':'RECONSTRUCCIÓN DE CURVA AGREGADA · 98 APOYOS')+' · '+measuredProfile.source+' · Control a 5 mm: '+integratedWork(75*9.80665*1.2,.005).toFixed(6)+' J (referencia previa: 0,871 J).';
+ el.style.color='#26683b';}
+function validateMeasuredProfile(times,forces){
+ if(times.length<2||times.length!==forces.length||times.some(x=>!Number.isFinite(x))||forces.some(x=>!Number.isFinite(x)||x<0))throw Error('Valores de tiempo/fuerza no válidos.');
+ if(times[0]!==0||Math.abs(times[times.length-1]-50)>1e-8||times.some((x,i)=>i&&x<=times[i-1]))throw Error('Los tiempos deben comenzar en 0 ms, terminar en 50 ms y ser estrictamente crecientes.');
+}
+/* Antiderivada exacta de la función lineal interpolada en cada intervalo.
+   u=x/d; F(x)=(F_i+(F_{i+1}-F_i)*(u-u_i)/(u_{i+1}-u_i))*escala.
+   ∫ F(x)dx = d*escala* Σ [F_i Δu + (ΔF/2) Δu].
+*/
+function integratedWork(force,displacementMeters){
+ if(!Number.isFinite(force)||!Number.isFinite(displacementMeters)||force<0||displacementMeters<0)return NaN;
+ const {times,forces}=measuredProfile;validateMeasuredProfile(times,forces);
+ const scale=force/(75*9.80665*1.2);let area=0;
+ for(let i=0;i<forces.length-1;i++){
+   const du=(times[i+1]-times[i])/50;
+   area+=forces[i]*du+0.5*(forces[i+1]-forces[i])*du;
+ }
+ return displacementMeters*scale*area;
+}
+function loadSupportCSV(text){
+ // Una fila por apoyo (exactamente 98); columnas: id, participante, F0, F10, F20, F30, F40, F50 (N)
+ const lines=text.replace(/\r/g,'').trim().split('\n').filter(x=>x.trim());
+ if(lines.length!==99)throw Error('El CSV debe tener encabezado y exactamente 98 filas de apoyos. Encontradas: '+(lines.length-1));
+ const sep=lines[0].includes(';')?';':',';
+ const headers=lines[0].split(sep).map(s=>s.trim().toLowerCase());
+ const expected=['id','participante','f0','f10','f20','f30','f40','f50'];
+ if(headers.length!==expected.length||expected.some((h,i)=>h!==headers[i]))throw Error('Encabezado requerido: '+expected.join(sep));
+ const rows=lines.slice(1).map((line,i)=>{
+   const v=line.split(sep).map(s=>s.trim());if(v.length!==8||!v[0]||!v[1])throw Error('Fila '+(i+2)+' inválida.');
+   const ns=v.slice(2).map(x=>Number(x));if(ns.some(x=>!Number.isFinite(x)||x<0))throw Error('Fuerzas inválidas en fila '+(i+2));
+   return {id:v[0],participant:v[1],forces:ns};
+ });
+ if(new Set(rows.map(r=>r.id)).size!==98)throw Error('Hay identificadores de apoyo repetidos.');
+ const participants=new Set(rows.map(r=>r.participant));
+ if(participants.size!==12)throw Error('Se esperan 12 participantes; encontrados: '+participants.size);
+ const avg=Array.from({length:6},(_,j)=>rows.reduce((sum,r)=>sum+r.forces[j],0)/98);
+ validateMeasuredProfile(PROFILE_SAMPLE_MS,avg);
+ measuredProfile={times:PROFILE_SAMPLE_MS,forces:avg,supports:98,participants:12,source:'Promedio punto a punto de 98 apoyos / 12 participantes importados; ventana 50 ms',verified98:true,aggregated98:true};
+ profileStatus();refreshResults();return measuredProfile;
+}
+function loadProfileInput(ev){const file=ev.target.files?.[0];if(!file)return;
+ file.text().then(text=>{loadSupportCSV(text);$('profileNotice').textContent='Archivo validado y perfil medio de 98 apoyos aplicado al motor.'})
+ .catch(err=>{$('profileNotice').textContent='Error: '+err.message});}
+function mechanicalPMR(){let nTotal=representativePeople(),flow=flowFactors();if(!flow)return null;let n=nTotal*flow.factor,L=+lengthField.value,d=+disp.value/1000;let mass=75,g=9.80665;/* Referencias biomecánicas internas. Horizontal y pendiente: GRF vertical de referencia 1,2 BW. No se aplica cos(ángulo): la pendiente modifica la biomecánica, pero la componente vertical útil para una superficie desplazable no admite esa reducción geométrica simplificada. Escalera: condición bidireccional de referencia 50/50; GRF 1,575 BW = media de los puntos medios bibliográficos de ascenso (1,2–1,7 BW) y descenso (1,4–2,0 BW). Geometría 16 x 30 cm: L debe medirse sobre la trayectoria inclinada; paso equivalente sqrt(0,30²+0,16²). Fundamento y trazabilidad: tesis/anexo. La media FADU 0,732 m (67 registros) es contraste, no sustituye el paso operativo 0,75 m. */let step=0.75,grf=1.2;if(walk.value==='Escalera'){step=Math.sqrt(.30*.30+.16*.16);grf=1.575}let stepsPerPerson=L/step;/* Pasos equivalentes esperados; no conteo entero de pisadas. */let force=mass*g*grf;/* Integral del interpolante del perfil temporal medio variable. */let workPerEvent=integratedWork(force,d);/* La curva proviene de marcha horizontal; para pendiente/escalera se escala por GRF como extrapolación de referencia, NO perfil medido allí. */let J=n*stepsPerPerson*workPerEvent;return {J,Wh:J/3600,n,nTotal,flow,stepsPerPerson,force,step,mass,grf,slopeFactor:1,workPerEvent,forceModel:measuredProfile.verified98?'perfil-medio-98-series-originales':'reconstruccion-6-puntos-media-98',triangleContrastJ:0.5*(2*1.339/.006)*(force/(75*9.80665*1.2))*d,referenceSupports:measuredProfile.supports}}
+function techResult(key,M,flywheelMode=flywheel.value){
+ const update=activeTechReferences[key];
+ const applicable=update&&update.conditions&&walk.value===update.conditions.walk&&Math.abs(+disp.value-update.conditions.strokeMm)<=.25;
+ const r=key==='other'?customReference():(applicable?update:techLibrary[key]);if(!r)return null;
+ const available=M.J,events=M.n*M.stepsPerPerson;
+ let gross;
+ if(key==='electro'){
+   // PMR = trabajo disponible ANTES de la captación: Liu, 45,8/75 % de captación,
+   // luego 50 % de conversión. Nunca aplicar además 0,511 J/pisada como salida.
+   gross=available*LIU_CAPTURE[flywheelMode]*LIU_ELECTRIC_CONVERSION;
+ }else if(r.mode==='eta')gross=available*r.eta;
+ else if(r.mode==='event')gross=Math.min(available,events*r.Jevent);
+ else return null;
+ // Factor de posición común, separado de circulación: exactamente una vez,
+ // excepto si la referencia verificada ya integra variación espacial del apoyo.
+ const positionFactor=r.positionAlreadyIncluded===true?1:PAN_POSITION_FACTOR;
+ const J=Math.max(0,Math.min(available,gross*positionFactor));
+ if(!Number.isFinite(J))return null;
+ const effectiveRef=key==='electro'?{mode:'eta',eta:LIU_CAPTURE[flywheelMode]*LIU_ELECTRIC_CONVERSION,
+  ref:'Liu et al. (2018) · DOI '+LIU_DOI+' · captación mecánica '+(100*LIU_CAPTURE[flywheelMode]).toFixed(1)+' % × conversión eléctrica 50 % · referencia general 0,511 J/pisada (no aplicada)',positionAlreadyIncluded:false}:r;
+ return {J,Wh:J/3600,reference:effectiveRef,positionFactor,
+   grossBeforePositionJ:gross,flywheel:key==='electro'&&flywheelMode==='on',flywheelMode:key==='electro'?flywheelMode:'no_aplica'};
+}
 let hasCalculated=false,hasCompared=false;
-function calculate(){if(!validate())return;hasCalculated=true;let fs=fstate(),ps=pstate(),is=integration.value,ls=legibility.value,states=[fs,ps,is,ls],c=states.includes('r')?'r':states.includes('y')?'y':'g';fout.title=walk.value==='Escalera'&&geometry.value==='r'?'No admisible: la instalación modifica la geometría inicial de los escalones.':walk.value==='Escalera'&&geometry.value==='u'?'Comprobación de la geometría inicial pendiente.':'Condición funcional de circulación.';let M=mechanicalPMR(),T=techResult(ALT,M);if(!T){errorBox.innerHTML='<b>No se puede calcular todavía.</b><br>Para “Otro” deben definirse primero los datos técnicos mínimos del sistema.';errorBox.style.display='block';return}let dem=representativeDemand();let pc=dem>0?T.Wh/dem*100:null;if(!Number.isFinite(M.J)||M.J<0||!Number.isFinite(T.J)||T.J<0||!Number.isFinite(pc)){errorBox.innerHTML='<b>No se puede calcular todavía.</b><br>Revise la demanda energética.';errorBox.style.display='block';return}pmrOut.textContent=(M.Wh<.01?M.Wh.toFixed(4):M.Wh.toFixed(2))+' Wh';elecOut.textContent=(T.Wh<.01?T.Wh.toFixed(4):T.Wh.toFixed(2))+' Wh';ratioOut.textContent=pc.toFixed(1)+' %';tout.textContent=techNames[ALT];[[fout,fs],[pout,ps],[iout,is],[lout,ls]].forEach(([el,st])=>{el.textContent=word(st);el.className='status '+st});pout.title=ps==='r'?'Excluido por superar el techo de recorrido adoptado para esta condición de marcha.':ps==='y'?'Aceptación condicionada a evaluación específica; no acredita seguridad ni habilitación.':+disp.value<=2?'Referencia preferente de baja alteración; sujeta a las restantes condiciones FPH.':'Admisible por recorrido; sujeto a las restantes condiciones FPH.';conditionOut.textContent=word(c);pmrOut.title=c==='r'?'Escenario no admisible: magnitud física hipotética, no energía autorizada para captación.':'Magnitud mecánica teórica condicionada a supuestos.';conditionOut.style.color=c==='r'?R:c==='y'?Y:G;resultCard.className='resultCard '+c;drawRadar('radar',pc,[fs,ps,is,ls],c)}
+function calculateCore(){lastResult=null;updateExport();resultCard.style.display='none';if(!validate())return;hasCalculated=true;if(ALT==='other'&&!validateCustom())return;let fs=fstate(),ps=pstate(),is=integration.value,ls=legibility.value,states=[fs,ps,is,ls],c=states.includes('r')?'r':states.includes('y')?'y':'g';fout.title=walk.value==='Escalera'&&geometry.value==='r'?'No admisible: la instalación modifica la geometría inicial de los escalones.':walk.value==='Escalera'&&geometry.value==='u'?'Comprobación de la geometría inicial pendiente.':'Condición funcional de circulación.';let M=mechanicalPMR(),T=techResult(ALT,M);if(!T){errorBox.innerHTML='<b>No se puede calcular todavía.</b><br>Revisá los datos técnicos del captador seleccionado.';errorBox.style.display='block';return}let dem=representativeDemand();let pc=dem>0?T.Wh/dem*100:null;if(!Number.isFinite(M.J)||M.J<0||!Number.isFinite(T.J)||T.J<0||!Number.isFinite(pc)){errorBox.innerHTML='<b>No se puede calcular todavía.</b><br>Revise la demanda energética.';errorBox.style.display='block';return}pmrOut.textContent=(M.Wh<.0001?M.Wh.toFixed(8):M.Wh<.01?M.Wh.toFixed(5):M.Wh.toFixed(2))+' Wh';elecOut.textContent=(T.Wh<.0001?T.Wh.toFixed(8):T.Wh<.01?T.Wh.toFixed(5):T.Wh.toFixed(2))+' Wh';ratioOut.textContent=pc.toFixed(1)+' %';ratioOut.style.color=energyColor(pc);const analyzedAt=new Date().toISOString();$('analysisDate').textContent='Fecha del análisis: '+new Date(analyzedAt).toLocaleDateString('es-AR',{timeZone:'America/Argentina/Buenos_Aires'});tout.textContent=techLabel(ALT);[[fout,fs],[pout,ps],[iout,is],[lout,ls]].forEach(([el,st])=>{el.textContent=word(st);el.className='status '+st});pout.title=choiceState()==='y'&&ps!=='r'?'Elección de recorrido comprometida: superficie captadora en todo el ancho. Recorrido mecánico: '+word(displacementState())+'.':ps==='r'?'Excluido por superar el techo de recorrido adoptado para esta condición de marcha.':ps==='y'?'Aceptación condicionada a evaluación específica; no acredita seguridad ni habilitación.':+disp.value<=2?'Referencia preferente de baja alteración; sujeta a las restantes condiciones FPH.':'Admisible por recorrido; sujeto a las restantes condiciones FPH.';flowOut.textContent=M.flow.label+' · '+(M.flow.factor*100).toLocaleString('es-AR',{maximumFractionDigits:2})+' %';conditionOut.textContent=word(c);pmrOut.title=c==='r'?'Escenario no admisible: magnitud física hipotética, no energía autorizada para captación.':'Magnitud mecánica teórica condicionada a supuestos.';conditionOut.style.color=c==='r'?R:c==='y'?Y:G;resultCard.className='resultCard '+c;drawRadar('radar',pc,[fs,ps,is,ls],c);resultCard.style.display='';const access=renderAccessResults();if(access.circulation.state!=='g')fout.title=$('circulationWarning').textContent+'. '+$('circulationDetail').textContent;const reasons=renderInterventionReasons();lastResult={M,T,dem,pc,c,states,key:ALT,...access,reasons,analyzedAt};moneyText();updateExport();return lastResult}
+
+function formatEnergy(wh){return wh<.0001?wh.toFixed(8):wh<.01?wh.toFixed(5):wh.toFixed(2);}
+function interventionReasons(){
+ const reasons={function:[],person:[],integration:[],legibility:[]};
+ if(F==='Especial')reasons.function.push('Circulación especial: requiere una evaluación específica de la intervención.');
+ if(F==='Evacuación')reasons.function.push('La función seleccionada es una vía de evacuación, excluida por el criterio funcional del modelo.');
+ if(F==='Accesible')reasons.function.push('La función seleccionada es un itinerario accesible, excluido por el criterio funcional del modelo.');
+ if(walk.value==='Escalera'&&geometry.value==='r')reasons.function.push('La instalación modifica la alzada, huella o nivel inicial de los escalones.');
+ if(walk.value==='Escalera'&&geometry.value==='u')reasons.function.push('No está comprobada la conservación de la geometría inicial de los escalones.');
+ const cd=circulationData();if(cd&&cd.state!=='g')reasons.function.push((cd.state==='r'?'El flujo supera la capacidad adoptada':'El flujo supera el umbral de confort')+': '+formatNumber(cd.hourly)+' personas/h frente a '+formatNumber(cd.state==='r'?cd.capacityTotal:cd.comfortTotal)+' personas/h para este acceso.'+(cd.basis.startsWith('Promedio')?' Se evalúa un promedio horario.':''));
+ const st=displacementState(),cut=walk.value==='Horizontal'?5:walk.value==='Pendiente'?4:2,cap=walk.value==='Horizontal'?10:walk.value==='Pendiente'?7.5:5;
+ if(st==='y')reasons.person.push('Recorrido mecánico: '+formatNumber(+disp.value)+' mm supera límite admisible de '+formatNumber(cut)+' mm');
+ if(st==='r')reasons.person.push('Recorrido mecánico: '+formatNumber(+disp.value)+' mm supera límite de '+formatNumber(cap)+' mm para '+walk.value.toLowerCase());
+ if(choiceState()==='y')reasons.person.push('Superficie captadora al 100 % del ancho. Compromete libertad de elección');
+ if(integration.value==='y')reasons.integration.push('Se seleccionó una integración moderada con el lugar existente.');
+ if(integration.value==='r')reasons.integration.push('Se seleccionó una integración baja con el lugar existente.');
+ if(legibility.value==='y')reasons.legibility.push('Se seleccionó una legibilidad alterada del recorrido.');
+ if(legibility.value==='r')reasons.legibility.push('Se seleccionó una legibilidad comprometida del recorrido.');
+ return reasons;
+}
+function renderInterventionReasons(){const reasons=interventionReasons();
+ for(const [key,id]of Object.entries({function:'functionReasons',person:'personReasons',integration:'integrationReasons',legibility:'legibilityReasons'})){
+  const el=$(id);el.textContent=reasons[key].map(x=>'• '+x).join('\n');el.hidden=!reasons[key].length;
+ }
+ const affected=Object.entries(reasons).filter(([,v])=>v.length).map(([k])=>({function:'Función',person:'Persona',integration:'Integración',legibility:'Legibilidad'}[k]));
+ $('conditionReasons').textContent=affected.length?'Determinada por: '+affected.join(' · ')+'.':'';
+ $('conditionReasons').hidden=!affected.length;return reasons;
+}
+async function compareResults(){
+ if(activeLookup)return;
+ // An explicit comparison button also works without a primary technology selection.
+ if(!validate(true))return;
+ updateCustomVisibility();return drawCompare();
+}
+[cmpA,cmpB].forEach(select=>select.addEventListener('change',()=>{updateCustomVisibility();if(hasCompared)drawCompare()}));
+
 function geo(){let cx=350,cy=340,rad=235,A=[-Math.PI/2,-Math.PI/2+2*Math.PI/5,-Math.PI/2+4*Math.PI/5,-Math.PI/2+6*Math.PI/5,-Math.PI/2+8*Math.PI/5];return{p:(r,i)=>[cx+Math.cos(A[i])*rad*r,cy+Math.sin(A[i])*rad*r]}}
 function pent(ctx,g,r,c,w){ctx.beginPath();for(let i=0;i<5;i++){let p=g.p(r,i);i?ctx.lineTo(...p):ctx.moveTo(...p)}ctx.closePath();ctx.strokeStyle=c;ctx.lineWidth=w;ctx.stroke()}
 function energyRadius(pc){return pc===null?0:Math.max(0,Math.min(pc/100,1))}
 function energyScale(ctx,g){ctx.save();ctx.font='11px Arial';ctx.fillStyle='#555';ctx.textAlign='right';[0,20,40,60,80,100].forEach(v=>{let q=g.p(v/100,0);ctx.beginPath();ctx.moveTo(q[0]-4,q[1]);ctx.lineTo(q[0]+4,q[1]);ctx.strokeStyle='#888';ctx.lineWidth=1;ctx.stroke();ctx.fillText(v+' %',q[0]-10,q[1]+4)});ctx.restore()}
-function rv(s){return s==='r'?.2:s==='y'?.6:s==='g'?1:.6}function zoneEnergy(pc){if(pc===null)return null;let r=Math.min(pc/100,1);return r<.4?'r':r<.8?'y':'g'}
-let radarAnim=null;function drawRadar(id,pc,s,cnd){if(radarAnim)cancelAnimationFrame(radarAnim);let cv=document.getElementById(id),ctx=cv.getContext('2d'),g=geo();function frame(t){ctx.clearRect(0,0,700,700);let pulse=(Math.sin(t/380)+1)/2;let tint=cnd==='r'?`rgba(255,${Math.round(241-12*pulse)},${Math.round(241-12*pulse)},1)`:cnd==='y'?'#fff9e9':cnd==='g'?'#f0f8f2':'#f5f5f3';ctx.beginPath();for(let k=0;k<5;k++){let q=g.p(1,k);k?ctx.lineTo(...q):ctx.moveTo(...q)}ctx.closePath();ctx.fillStyle=tint;ctx.fill();pent(ctx,g,.2,R,2);pent(ctx,g,.6,Y,2);pent(ctx,g,1,G,2.4);energyScale(ctx,g);let es=zoneEnergy(pc),vals=[energyRadius(pc),rv(s[0]),rv(s[1]),rv(s[2]),rv(s[3])],sts=[es,...s],pts=vals.map((r,k)=>g.p(r,k));ctx.beginPath();pts.forEach((q,k)=>k?ctx.lineTo(...q):ctx.moveTo(...q));ctx.closePath();ctx.strokeStyle=N;ctx.lineWidth=4.6;ctx.stroke();pts.forEach((q,k)=>{let st=sts[k],col=st==='r'?R:st==='y'?Y:st==='g'?G:'#777';let active=(st==='y'&&cnd==='y')||(st==='r'&&cnd==='r');let rr=active?10.5+3*pulse:10.5;if(active){ctx.beginPath();ctx.arc(...q,17+5*pulse,0,Math.PI*2);ctx.strokeStyle=st==='r'?`rgba(185,75,75,${.18+.3*pulse})`:`rgba(195,154,37,${.18+.3*pulse})`;ctx.lineWidth=4;ctx.stroke()}ctx.beginPath();ctx.arc(...q,rr,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=2;ctx.stroke()});let L=[['ENERGÍA / DEMANDA',350,35],['FUNCIÓN',625,230],['PERSONA',525,615],['INTEGRACIÓN',175,615],['LEGIBILIDAD',70,230]];ctx.fillStyle='#222';ctx.font='bold 14px Arial';ctx.textAlign='center';L.forEach(x=>ctx.fillText(...x));ctx.font='bold 26px Arial';ctx.fillText(pc===null?'—':pc.toFixed(1)+' %',350,70);if(cnd==='r'||cnd==='y')radarAnim=requestAnimationFrame(frame)}frame(performance.now())}
-function drawCompare(){hasCompared=true;let cv=compareCanvas,ctx=cv.getContext('2d'),g=geo();ctx.clearRect(0,0,700,700);if(!validate())return;let M=mechanicalPMR(),dem=representativeDemand(),fs=fstate(),ps=pstate(),is=integration.value,ls=legibility.value;let keyOf=n=>Object.keys(techNames).find(k=>techNames[k]===n),a=techResult(keyOf(cmpA.value),M),b=techResult(keyOf(cmpB.value),M);if(!a||!b){errorBox.innerHTML='<b>No se puede comparar todavía.</b><br>“Otro” requiere definir sus datos técnicos mínimos.';errorBox.style.display='block';return}let pca=a.Wh/dem*100,pcb=b.Wh/dem*100;ctx.beginPath();for(let k=0;k<5;k++){let q=g.p(1,k);k?ctx.lineTo(...q):ctx.moveTo(...q)}ctx.closePath();ctx.fillStyle='#f5f5f3';ctx.fill();pent(ctx,g,.2,R,2);pent(ctx,g,.6,Y,2);pent(ctx,g,1,G,2.4);energyScale(ctx,g);function vals(pc){return [energyRadius(pc),rv(fs),rv(ps),rv(is),rv(ls)]}function sts(pc){return [zoneEnergy(pc),fs,ps,is,ls]}function poly(pc,dash,col){let vv=vals(pc),ss=sts(pc),pts=vv.map((r,k)=>g.p(r,k));ctx.setLineDash(dash);ctx.beginPath();pts.forEach((q,k)=>k?ctx.lineTo(...q):ctx.moveTo(...q));ctx.closePath();ctx.strokeStyle=col;ctx.lineWidth=4.6;ctx.stroke();ctx.setLineDash([]);pts.forEach((q,k)=>{let st=ss[k],c=st==='r'?R:st==='y'?Y:G;ctx.beginPath();ctx.arc(...q,9,0,Math.PI*2);ctx.fillStyle=c;ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=2;ctx.stroke()})}poly(pca,[],'#666');poly(pcb,[14,9],'#999');let L=[['ENERGÍA / DEMANDA',350,75],['FUNCIÓN',625,230],['PERSONA',525,615],['INTEGRACIÓN',175,615],['LEGIBILIDAD',70,230]];ctx.fillStyle='#222';ctx.font='bold 14px Arial';ctx.textAlign='center';L.forEach(x=>ctx.fillText(...x));ctx.font='bold 14px Arial';ctx.textAlign='left';ctx.setLineDash([]);ctx.strokeStyle='#666';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(115,35);ctx.lineTo(160,35);ctx.stroke();ctx.fillText(cmpA.value+' · '+pca.toFixed(1)+' %',170,40);ctx.setLineDash([12,7]);ctx.strokeStyle='#999';ctx.beginPath();ctx.moveTo(390,35);ctx.lineTo(435,35);ctx.stroke();ctx.setLineDash([]);ctx.fillText(cmpB.value+' · '+pcb.toFixed(1)+' %',445,40);ctx.font='11px Arial';ctx.fillStyle='#666';ctx.fillText('Referencias: rojo = no admisible · amarillo = comprometida · verde = admisible',135,660)}
+function energyColor(pc){const state=zoneEnergy(pc);return state==='r'?R:state==='y'?Y:state==='g'?G:'#777'}
+function rv(s){return s==='r'?.2:s==='y'?.6:s==='g'?1:.6}/* Color de cobertura: bandas geométricas del radar; independiente de admisibilidad FPH. */function zoneEnergy(pc){if(pc===null)return null;return pc<20?'r':pc<60?'y':'g'}
+let radarAnim=null;function drawRadar(id,pc,s,cnd){if(radarAnim)cancelAnimationFrame(radarAnim);let cv=document.getElementById(id),ctx=cv.getContext('2d'),g=geo();function frame(t){ctx.clearRect(0,0,700,700);let pulse=(Math.sin(t/380)+1)/2;let tint=cnd==='r'?`rgba(255,${Math.round(241-12*pulse)},${Math.round(241-12*pulse)},1)`:cnd==='y'?'#fff9e9':cnd==='g'?'#f0f8f2':'#f5f5f3';ctx.beginPath();for(let k=0;k<5;k++){let q=g.p(1,k);k?ctx.lineTo(...q):ctx.moveTo(...q)}ctx.closePath();ctx.fillStyle=tint;ctx.fill();pent(ctx,g,.2,R,2);pent(ctx,g,.6,Y,2);pent(ctx,g,1,G,2.4);let es=zoneEnergy(pc),vals=[energyRadius(pc),rv(s[0]),personRadius(),rv(s[2]),rv(s[3])],sts=[es,...s],pts=vals.map((r,k)=>g.p(r,k));ctx.beginPath();pts.forEach((q,k)=>k?ctx.lineTo(...q):ctx.moveTo(...q));ctx.closePath();ctx.strokeStyle=N;ctx.lineWidth=4.6;ctx.stroke();pts.forEach((q,k)=>{let st=sts[k],col=st==='r'?R:st==='y'?Y:st==='g'?G:'#777';let active=(k===0&&(st==='y'||st==='r'))||(st==='y'&&cnd==='y')||(st==='r'&&cnd==='r');let rr=active?10.5+3*pulse:10.5;if(active){ctx.beginPath();ctx.arc(...q,17+5*pulse,0,Math.PI*2);ctx.strokeStyle=st==='r'?`rgba(185,75,75,${.18+.3*pulse})`:`rgba(195,154,37,${.18+.3*pulse})`;ctx.lineWidth=4;ctx.stroke()}ctx.beginPath();ctx.arc(...q,rr,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=2;ctx.stroke()});let L=[['ENERGÍA / DEMANDA',350,35],['FUNCIÓN',625,230],['PERSONA',525,565],['INTEGRACIÓN',175,565],['LEGIBILIDAD',70,230]];ctx.fillStyle='#222';ctx.font='bold 14px Arial';ctx.textAlign='center';L.forEach(x=>ctx.fillText(...x));ctx.font='bold 26px Arial';ctx.fillStyle=energyColor(pc);ctx.fillText(pc===null?'—':pc.toFixed(1)+' %',350,70);if(cnd==='r'||cnd==='y'||es==='r'||es==='y')radarAnim=requestAnimationFrame(frame)}frame(performance.now())}
+function drawCompare(){lastComparison=null;updateExport();hasCompared=true;$('compareOutput').hidden=true;$('compareError').textContent='';let cv=compareCanvas,ctx=cv.getContext('2d'),g=geo();ctx.clearRect(0,0,700,700);if(!validate(true))return;let M=mechanicalPMR(),dem=representativeDemand(),fs=fstate(),ps=pstate(),is=integration.value,ls=legibility.value;let keys=[cmpA,cmpB].map(select=>comparisonKey(select));if(keys.includes('other')&&!validateCustom())return;const modes=[cmpA,cmpB].map(select=>select.value==='electro_on'?'on':'off');if(cmpA.value===cmpB.value){$('compareError').textContent='Elegí dos alternativas diferentes.';return}let [a,b]=keys.map((key,i)=>techResult(key,M,modes[i]));if(!a||!b){errorBox.innerHTML='<b>No se puede comparar todavía.</b><br>Revisá los datos técnicos de las alternativas seleccionadas.';errorBox.style.display='block';return}let pca=a.Wh/dem*100,pcb=b.Wh/dem*100;if(!Number.isFinite(pca)||!Number.isFinite(pcb)){errorBox.textContent='Revisá la demanda energética.';errorBox.style.display='block';return}ctx.beginPath();for(let k=0;k<5;k++){let q=g.p(1,k);k?ctx.lineTo(...q):ctx.moveTo(...q)}ctx.closePath();ctx.fillStyle='#f5f5f3';ctx.fill();pent(ctx,g,.2,R,2);pent(ctx,g,.6,Y,2);pent(ctx,g,1,G,2.4);function vals(pc){return [energyRadius(pc),rv(fs),personRadius(),rv(is),rv(ls)]}function sts(pc){return [zoneEnergy(pc),fs,ps,is,ls]}function poly(pc,dash,col){let vv=vals(pc),ss=sts(pc),pts=vv.map((r,k)=>g.p(r,k));ctx.setLineDash(dash);ctx.beginPath();pts.forEach((q,k)=>k?ctx.lineTo(...q):ctx.moveTo(...q));ctx.closePath();ctx.strokeStyle=col;ctx.lineWidth=4.6;ctx.stroke();ctx.setLineDash([]);pts.forEach((q,k)=>{let st=ss[k],c=st==='r'?R:st==='y'?Y:st==='g'?G:'#777';ctx.beginPath();ctx.arc(...q,9,0,Math.PI*2);ctx.fillStyle=c;ctx.fill();ctx.strokeStyle='white';ctx.lineWidth=2;ctx.stroke()})}poly(pca,[],'#666');poly(pcb,[14,9],'#999');let L=[['ENERGÍA / DEMANDA',350,75],['FUNCIÓN',625,230],['PERSONA',525,565],['INTEGRACIÓN',175,565],['LEGIBILIDAD',70,230]];ctx.fillStyle='#222';ctx.font='bold 14px Arial';ctx.textAlign='center';L.forEach(x=>ctx.fillText(...x));ctx.font='bold 14px Arial';ctx.textAlign='left';ctx.setLineDash([]);ctx.strokeStyle='#666';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(115,35);ctx.lineTo(160,35);ctx.stroke();ctx.fillText(techLabel(keys[0],modes[0])+' · '+pca.toFixed(1)+' %',170,40,205);ctx.setLineDash([12,7]);ctx.strokeStyle='#999';ctx.beginPath();ctx.moveTo(390,35);ctx.lineTo(435,35);ctx.stroke();ctx.setLineDash([]);ctx.fillText(techLabel(keys[1],modes[1])+' · '+pcb.toFixed(1)+' %',445,40,225);ctx.font='11px Arial';ctx.fillStyle='#666';ctx.fillText('Referencias: rojo = no admisible · amarillo = comprometida · verde = admisible',135,660);lastComparison={keys,results:[a,b],analyzedAt:new Date().toISOString()};[a,b].forEach((result,i)=>{const suffix=i===0?'A':'B';$('compareName'+suffix).textContent=suffix+' · '+techLabel(keys[i],modes[i]);$('compareEnergy'+suffix).textContent=formatEnergy(result.Wh)+' Wh';$('compareRatio'+suffix).textContent=formatNumber(result.Wh/dem*100)+' % de la demanda';$('compareRatio'+suffix).style.color=energyColor(result.Wh/dem*100);});const state=[fs,ps,is,ls].includes('r')?'r':[fs,ps,is,ls].includes('y')?'y':'g';$('compareCondition').textContent='Condición de intervención: '+word(state);$('compareCondition').style.color=state==='r'?R:state==='y'?Y:G;$('compareOutput').hidden=false;compareCanvas.style.display='block';updateExport();return lastComparison}
+
+const customTech=$('customTech'), customName=$('customName'), customMode=$('customMode');
+const customValue=$('customValue'), customSource=$('customSource');
+const customFirst=$('customFirst'), customSecond=$('customSecond');
+const customFeedback=$('customFeedback'), exportRow=$('exportRow'), exportStatus=$('exportStatus');
+let lastResult=null,lastComparison=null,derivedFrom=null;
+
+function comparisonKey(select){
+  return select.value.startsWith('electro_')?'electro':select.value==='other'?'other':Object.keys(techNames).find(key=>techNames[key]===select.value);
+}
+
+function updateCustomVisibility(){
+  const needed=ALT==='other'||[cmpA,cmpB].some(select=>select.value==='other');
+  customTech.classList.toggle('hidden',!needed);
+}
+
+function techLabel(key,flywheelMode=flywheel.value){
+  return key==='other'?(customName.value.trim()||techNames.other):key==='electro'?'Electromagnético · '+(flywheelMode==='on'?'con volante':'sin volante'):techNames[key];
+}
+
+function syncCustomMode(){
+  const efficiency=customMode.value==='eta';
+  $('customValueLabel').textContent=efficiency?'Eficiencia de conversión [%]':'Energía eléctrica por pisada [mJ/pisada]';
+  $('customHelperLabel').textContent=efficiency?'Calcular a partir de un ensayo':'Calcular a partir de potencia y duración';
+  $('customFirstLabel').textContent=efficiency?'Energía mecánica de entrada [mJ/pisada]':'Potencia eléctrica media [mW]';
+  $('customSecondLabel').textContent=efficiency?'Energía eléctrica de salida [mJ/pisada]':'Duración de generación por pisada [s]';
+  customValue.max=efficiency?'100':'';
+  customValue.value=customFirst.value=customSecond.value='';
+  customFeedback.textContent='';
+  derivedFrom=null;
+}
+
+function customReference(){
+  const value=customValue.valueAsNumber, mode=customMode.value;
+  if(!customName.value.trim()||!Number.isFinite(value)||value<0||(mode==='eta'&&value>100))return null;
+  return {
+    mode,eta:mode==='eta'?value/100:undefined,Jevent:mode==='event'?value/1000:undefined,
+    ref:customSource.value.trim(),derivedFrom
+  };
+}
+
+function validateCustom(){
+  if(customReference())return true;
+  errorBox.textContent='Completá el nombre y un valor válido para el captador personalizado. La eficiencia debe estar entre 0 y 100 % y la energía por pisada debe ser igual o mayor a cero.';
+  errorBox.style.display='block';
+  if(!customName.value.trim())customName.classList.add('missing');
+  if(!Number.isFinite(customValue.valueAsNumber)||!customValue.validity.valid)customValue.classList.add('missing');
+  return false;
+}
+
+function deriveCustomValue(){
+  const first=customFirst.valueAsNumber,second=customSecond.valueAsNumber;
+  const efficiency=customMode.value==='eta';
+  const value=efficiency?(second/first)*100:first*second;
+  if(!Number.isFinite(value)||!Number.isFinite(first)||!Number.isFinite(second)
+      ||first<0||second<0||(efficiency&&(first===0||second>first))||(!efficiency&&second===0)){
+    customFeedback.textContent=efficiency
+      ?'Ingresá las energías del mismo ensayo. La entrada debe ser mayor a cero y la salida debe estar entre cero y la entrada.'
+      :'Ingresá la potencia media (cero o mayor) y una duración mayor a cero.';
+    return;
+  }
+  customValue.value=String(value);
+  derivedFrom=efficiency?[[ 'Entrada mecánica [mJ/pisada]',first],['Salida eléctrica medida [mJ/pisada]',second]]
+    :[['Potencia eléctrica media [mW]',first],['Duración de generación [s]',second]];
+  customFeedback.textContent='Valor calculado aplicado.';
+  refreshResults();
+}
+
+function updateExport(){
+  exportRow.hidden=!lastResult&&!lastComparison;
+}
+
+function technologyRows(key,result,dem){
+  const r=result.reference;
+  return [
+    ['Captador',techLabel(key,result.flywheelMode)],
+    ['Tipo de dato',r.mode==='eta'?'Eficiencia de conversión':'Energía por pisada'],
+    r.mode==='eta'?['Eficiencia [%]',r.eta*100]:['Referencia eléctrica [mJ/pisada]',r.Jevent*1000],
+    ['Fuente y condiciones',r.ref||'Sin informar'],['Volante de inercia',result.flywheelMode==='on'?'Liu con volante':result.flywheelMode==='off'?'Liu sin volante':result.flywheelMode==='library'?'Biblioteca, sin dato de volante':'No aplica'],
+    ...(r.derivedFrom||[]),
+    ['Referencia general electromagnética [J/pisada]',key==='electro'?0.511:'No aplica'],['Energía eléctrica [Wh]',result.Wh],['Energía / demanda [%]',100*result.Wh/dem]
+  ];
+}
+
+function csvCell(value){
+  if(typeof value==='number')return String(value).replace('.',',');
+  let field=String(value??'');
+  if(/^[\s\uFEFF]*[=+\-@]|^[\t\r\n]/u.test(field))field="'"+field;
+  return '"'+field.replaceAll('"','""')+'"';
+}
+
+function exportResults(){
+  clearTimeout(refreshTimer);
+  const showResult=hasCalculated,showComparison=hasCompared;
+  if(showResult)calculateCore();
+  if(showComparison)drawCompare();
+  if(!lastResult&&!lastComparison)return;
+  const M=lastResult?.M||mechanicalPMR(),dem=representativeDemand();
+  const states=[fstate(),pstate(),integration.value,legibility.value];
+  const overall=states.includes('r')?'r':states.includes('y')?'y':'g';
+  const rows=[
+    ['Dato','Valor'],['Fecha del análisis',(lastResult?.analyzedAt||lastComparison?.analyzedAt||new Date().toISOString())],['Motor','PMR Situado V18'],['Proyecto',project.value.trim()],
+    ['Interacción',interaction.value],['Período ingresado',period.value==='hour'?'1 hora':period.value==='day'?'1 día':days.value+' días'],
+    ['Base del resultado',period.value==='hour'?'1 hora':period.value==='other'?'Día promedio':'1 día'],
+    ['Personas ingresadas',+people.value],['Demanda ingresada [Wh]',+demand.value],
+    ['Demanda del resultado [Wh]',dem],['Tarifa variable [ARS/kWh]',priceData.tariffARS],['Fuente tarifa',priceData.tariffSource],['Fecha tarifa',priceData.tariffDate],['Tarifa confirmada en consulta',priceData.tariffLive?'Sí':'No: referencia publicada'],['Cotización BCRA [ARS/USD]',priceData.rateARS??'No disponible'],['Fecha cotización BCRA',priceData.rateDate||'No disponible'],['Estado cotización BCRA',priceData.rateLive?'Consulta en línea':'Referencia de respaldo fechada'],['Fuente cotización BCRA',priceData.rateSource],['Valor estimado [ARS]',lastResult?lastResult.T.Wh/1000*priceData.tariffARS:'No calculado'],['Valor estimado [USD]',lastResult&&priceData.rateARS?lastResult.T.Wh/1000*priceData.tariffARS/priceData.rateARS:'No disponible'],['Personas del período representativo',M.nTotal],
+    ['Función del recorrido',F],['Condición de marcha',walk.value],
+    ['Longitud [m]',+lengthField.value],['Ancho útil total [m]',+widthField.value],
+    ['Superficie intervenida [%]',100*surfaceData().fraction],['Superficie captadora [m²]',surfaceData().area],['Módulos equivalentes (redondeo superior)',surfaceData().modules],['Referencia de módulo','35 × 35 cm (0,1225 m²); triángulo equilátero de 50 cm: 0,1083 m²'],
+    ['Circulación: base temporal',circulationData().basis],['Circulación total ambos sentidos [personas/h]',circulationData().hourly],['Circulación específica [personas/h por metro]',circulationData().specific],
+    ['Confort: umbral específico [personas/h por metro]',circulationData().comfort],['Capacidad: umbral específico [personas/h por metro]',circulationData().capacity],['Confort: límite del acceso [personas/h]',circulationData().comfortTotal],['Capacidad: límite del acceso [personas/h]',circulationData().capacityTotal],
+    ['Estado por circulación',circulationData().state==='r'?'INADMISIBLE POR CIRCULACIÓN':word(circulationData().state)],['Umbrales de pendiente derivados del modelo',circulationData().derived?'Sí: q = densidad × velocidad, densidad conservada':'No'],['Fuente circulación',CIRCULATION_SOURCE],['Contraflujo y evitación','Flujo total en ambos sentidos; reparto medio agregado; sin multiplicadores energéticos adicionales'],['Recorrido mecánico [mm]',+disp.value],
+    ['Distribución de la superficie captadora',M.flow.label],['Flujo aprovechable [%]',100*M.flow.factor],['Escenario de disposición','Referencia operativa'],['Disposición aplicada [%]',100*M.flow.a],
+    ['Personas aprovechables',M.n],['Pasos equivalentes',M.n*M.stepsPerPerson],
+    ['Estado consulta científica',latestScience.message||'No consultado'],['Fuentes actualizadas',latestScience.updated.map(x=>x.reference).join(' | ')||'Ninguna'],['Fecha consulta científica',latestScience.checkedAt||'No consultado'],['Modelo mecánico','Primitiva analítica del interpolante lineal por tramos de la fuerza media (ventana 50 ms)'],['Apoyos base del promedio',measuredProfile.supports],['Fuente de perfil',measuredProfile.source],['Base de 98 apoyos',measuredProfile.verified98?'98 series importadas y promediadas':'Seis puntos agregados de la media de 98 apoyos; series originales no disponibles'],['Desviación respecto a 0,871 J a 5 mm [J]',integratedWork(75*9.80665*1.2,.005)-AGGREGATED_GAIT98_TARGET_J_5MM],['Trabajo integrado por pisada [J]',M.workPerEvent],['PMR mecánico del escenario [Wh]',M.Wh],['Condición de intervención',word(overall)],
+    ...['Función','Persona','Integración','Legibilidad'].map((label,i)=>[label,word(states[i])])
+  ];
+  Object.entries(interventionReasons()).forEach(([criterion,reasons])=>{if(reasons.length)rows.push(['Motivos · '+({function:'Función',person:'Persona',integration:'Integración',legibility:'Legibilidad'}[criterion]),reasons.join(' | ')]);});
+  if(walk.value==='Pendiente')rows.push(['Inclinación [°]',+slope.value]);
+  if(walk.value==='Escalera')rows.push(['Geometría inicial',geometry.selectedOptions[0].textContent.trim()]);
+  if(lastResult)rows.push([],['Resultado principal'],...technologyRows(lastResult.key,lastResult.T,dem));
+  if(lastComparison)lastComparison.keys.forEach((key,i)=>{
+    rows.push([],['Alternativa '+(i+1)],...technologyRows(key,lastComparison.results[i],dem));
+  });
+  const csv='\uFEFF'+rows.map(row=>row.map(csvCell).join(';')).join('\r\n');
+  const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
+  const a=document.createElement('a');
+  const name=project.value.trim().replace(/[^\p{L}\p{N}_-]+/gu,'-').replace(/^-+|-+$/g,'').slice(0,70);
+  a.href=url;
+  a.download='PMR-Situado-V18'+(name?'-'+name:'')+'.csv';
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+  exportStatus.textContent='CSV descargado.';
+}
+
+customMode.addEventListener('change',syncCustomMode);
+customValue.addEventListener('input',()=>{derivedFrom=null;customFeedback.textContent=''});
+[customFirst,customSecond].forEach(el=>el.addEventListener('input',()=>{customFeedback.textContent=''}));
+
+$('customDerive').addEventListener('click',deriveCustomValue);
+$('exportResults').addEventListener('click',exportResults);
+syncCustomMode();updateFlywheelVisibility();
 
 // Tras el primer cálculo, los cambios actualizan el resultado y la comparación.
 let refreshTimer;
-function refreshResults(){if(!hasCalculated&&!hasCompared)return;clearTimeout(refreshTimer);refreshTimer=setTimeout(()=>{if(hasCalculated)calculate();if(hasCompared)drawCompare()},120)}
+function refreshResults(){if(activeLookup||(!hasCalculated&&!hasCompared))return;clearTimeout(refreshTimer);refreshTimer=setTimeout(()=>{if(hasCalculated)calculateCore();if(hasCompared)drawCompare()},120)}
 document.querySelectorAll('input,select').forEach(el=>{el.addEventListener('input',refreshResults);el.addEventListener('change',refreshResults)});
-document.querySelectorAll('.fcard,.techbtn').forEach(el=>el.addEventListener('click',refreshResults));
-</script></main></body></html>
+document.querySelectorAll('.fcard,.techbtn,.coverage-btn').forEach(el=>el.addEventListener('click',refreshResults));
+</script></main><!-- Respaldo de cotización BCRA A3500: 1547,0336 ARS/USD al 13/11/2026, consultado en indicadores oficiales. No sustituye la consulta en vivo. -->
+<!-- Revisión de acceso y circulación, 17/11/2026.
+Verificación: 960 comparaciones contra el HTML recibido, energía mecánica y eléctrica idénticas;
+30 comprobaciones de frontera; exportación CSV, captador personalizado, ancho inválido y cálculo
+con circulación roja comprobados. Entorno: JavaScript VM, DOM simulado y canvas nativo.
+Comprobación visual Chromium no completada: el entorno bloqueó el inicio del navegador.
+Sin modificaciones de los parámetros tecnológicos ni del perfil de fuerza recibido.
+--></body></html>
